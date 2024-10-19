@@ -1,0 +1,81 @@
+header {
+  background-image: url('Z:/RECURSOS/Pagina Wb/WEB/images/portada.jpg');
+  background-size: cover; /* Hace que la imagen cubra todo el header */
+  background-position: center; /* Centra la imagen */
+  height: 200px; /* Puedes ajustar la altura como prefieras */
+  color: rgb(255, 255, 255); /* Para que el texto sea visible sobre la imagen */
+  text-align: center; /* Centra el texto en el header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header h1 {
+  color: #f4f1f1; /* Cambia este valor por el color que prefieras */
+}
+
+/* Iconos de navegación - Efecto hover */
+.nav-link i {
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover i {
+  color: #000; /* Color general por defecto */
+}
+
+.nav-link.youtube:hover i {
+  color: #FF0000; /* Rojo para YouTube */
+}
+
+.nav-link.linkedin:hover i {
+  color: #0077b5; /* Azul para LinkedIn */
+}
+
+.nav-link.email:hover i {
+  color: #34a853; /* Verde para email (o puedes elegir otro color) */
+}
+
+.nav-link.projects:hover i {
+  color: #ff9800; /* Naranja para proyectos */
+}
+
+.nav-link i {
+  font-size: 1.5rem; /* Cambia este valor para ajustar el tamaño */
+  transition: font-size 0.3s ease-in-out;
+}
+
+.nav-link:hover i {
+  font-size: 1.8rem; /* Íconos más grandes al pasar el cursor */
+}
+
+nav {
+  display: block;
+  width: 100%;
+  background-color: #f8f9fa; /* Color del navbar */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombras opcionales */
+  padding: 10px 0; /* Ajusta el espacio alrededor del navbar */
+}
+
+/* Estilos para el contenido principal */
+.main-header {
+  padding: 50px 0; /* Espacio superior e inferior alrededor del contenido */
+  background-color: #f1f1f1; /* Color de fondo opcional */
+}
+
+.main-header h1 {
+  font-size: 3rem; /* Tamaño del H1 */
+  color: #333;
+}
+
+.main-header p {
+  font-size: 1.25rem; /* Tamaño del párrafo */
+  color: #666;
+}
+
+/* Centrar el contenido dentro de su contenedor */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}

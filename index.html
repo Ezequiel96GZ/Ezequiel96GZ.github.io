@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - Mi Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+        }
+
+        #intro {
+            text-align: center;
+            color: white;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #intro.fade-out {
+            opacity: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="intro">
+        <h1>Bienvenido a mi Portafolio</h1>
+        <p>Explora mis proyectos en Java, desarrollo web, y más.</p>
+        <i class="fas fa-cog fa-spin fa-3x"></i>
+    </div>
+
+    <script>
+        // Función para hacer que el intro se desvanezca
+        function fadeOutEffect() {
+            var fadeTarget = document.getElementById("intro");
+            fadeTarget.classList.add("fade-out");
+        }
+
+        // Llamar a la función después de 3 segundos
+        setTimeout(fadeOutEffect, 3000);
+
+        // Redirige después de que se desvanezca
+        setTimeout(function(){
+            window.location.href = "cv.html"; // Cambia a la página principal
+        }, 4000);
+    </script>
+</body>
+</html>
