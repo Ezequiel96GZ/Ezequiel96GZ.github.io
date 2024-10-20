@@ -2,7 +2,9 @@
 
 .main-header {
   position: relative;
-  height: 300px; /* Ajusta la altura según lo que necesites */
+  height: 350px; /* Ajusta la altura según lo que necesites */
+  padding: 5px 0; /* Espacio superior e inferior alrededor del contenido */
+  background-color: #000000; /* Color de fondo opcional */
 }
 
 /* Superpone el texto sobre el carrusel */
@@ -21,20 +23,20 @@
   font-size: 3rem;
   margin: 0;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8),
-  -3px -3px 5px rgba(0, 0, 0, 0.8);
+              -3px -3px 5px rgba(0, 0, 0, 0.8);
 }
 
 .overlay p {
   color: #ffffff !important;
   font-size: 1.25rem;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8),
-  -3px -3px 5px rgba(0, 0, 0, 0.8);
+              -3px -3px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* Ajusta el tamaño del carrusel para que ocupe el 100% del ancho */
 .carousel-inner img {
   width: 100%;
-  height: 300px; /* Asegura que el carrusel coincida con la altura */
+  height: 350px; /* Asegura que el carrusel coincida con la altura */
   object-fit: cover; /* Mantiene la proporción de las imágenes */
 }
 
@@ -73,7 +75,6 @@
 }
 
 nav {
-  
   display: block;
   width: 100%;
   background-color: #f8f9fa; /* Color del navbar */
@@ -82,11 +83,6 @@ nav {
 }
 
 /* Estilos para el contenido principal */
-.main-header {
-  padding: 5px 0; /* Espacio superior e inferior alrededor del contenido */
-  background-color: #000000; /* Color de fondo opcional */
-}
-
 .main-header h1 {
   font-size: 3rem; /* Tamaño del H1 */
   color: #333;
@@ -104,26 +100,21 @@ nav {
   padding: 0 20px;
   text-align: center;
 }
-.about-section {
-  background-color: #f8f9fa; /* Fondo suave */
-  padding: 50px 0;
-}
 
 .about-section {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Fondo suave */
   padding: 20px 0;
   text-align: center;
 }
 
 .container {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .profile-img {
   width: 150px;
-  height:  150px;
+  height: 150px;
   border-radius: 50%; /* Hace que la imagen sea redonda */
   margin-right: 10px; /* Espacio entre la imagen y el título */
   object-fit: cover;
@@ -143,3 +134,169 @@ h2 {
   line-height: 1.8;
   display: none; /* Inicia oculto */
 }
+
+.about-section {
+  background-color: #f8f9fa; /* Fondo suave */
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 40px; /* Espacio debajo de la sección "Quién Soy" */
+}
+
+#projects, #contact {
+  margin-bottom: 40px; /* Espacio debajo de las secciones de "Proyectos" y "Contacto" */
+}
+/* Estilos generales */
+/* Estilos generales */
+body {
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+/* Modo claro */
+body.light-mode {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Estilos para el selector en modo claro */
+select {
+  background-color: #ffffff; /* Fondo blanco por defecto */
+  color: #000000; /* Texto negro por defecto */
+  border: 1px solid #ccc; /* Borde claro */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Estilos para el selector en modo oscuro */
+body.dark-mode select {
+  background-color: #333; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  border: 1px solid #555; /* Borde más oscuro */
+}
+
+/* Estilo para los option - no necesitas clases específicas, ya que no se aplican */
+option {
+  background-color: #ffffff; /* Fondo blanco por defecto */
+  color: #000000; /* Texto negro por defecto */
+}
+
+/* Cambia el color de fondo y texto cuando el body esté en modo oscuro */
+body.dark-mode option {
+  background-color: #333; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+.section-bg {
+  background-color: #f8f9fa; /* Color de fondo */
+  padding: 20px; /* Espaciado interno */
+  margin-bottom: 40px; /* Espacio entre secciones */
+  border-radius: 8px; /* Bordes redondeados (opcional) */
+}
+
+body.light-mode .section-bg {
+  background-color: #f8f9fa; /* Fondo claro */
+}
+
+/* Modo oscuro */
+body.dark-mode .section-bg {
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+.list-group {
+  margin-bottom: 20px; /* Espacio debajo de la lista */
+}
+
+/* Estilos para el modo claro */
+body.light-mode .list-group-item {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+}
+
+body.light-mode .list-group-item a {
+  color: #007bff; /* Color del enlace */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode .list-group-item {
+  background-color: #333; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+body.dark-mode .list-group-item a {
+  color: #ffffff; /* Color del enlace en modo oscuro */
+}
+
+/* Opcional: Cambiar color al pasar el mouse sobre los enlaces en modo oscuro */
+body.dark-mode .list-group-item a:hover {
+  color: #ff9800; /* Naranja, por ejemplo */
+}
+
+/* Opcional: Cambiar color al pasar el mouse sobre los elementos de la lista */
+body.dark-mode .list-group-item:hover {
+  background-color: #444; /* Fondo más claro en hover */
+}
+
+.about-section {
+  position: relative;
+  overflow: hidden; /* Evita que se vea contenido fuera del área visible */
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Contenedor "puerta corrediza" */
+.sliding-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: transform 0.5s ease-in-out; /* Transición suave */
+  z-index: 2;
+}
+
+/* Imagen redonda */
+.sliding-panel img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sliding-panel h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Contenido que se desliza desde el lado derecho */
+.about-content {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Inicialmente fuera de la vista */
+  width: 100%;
+  padding: 20px;
+
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+/* Cuando el contenido se muestra */
+.about-content.show {
+  transform: translateX(-100%);
+}
+
+/* Cuando la "puerta" se desplaza */
+.sliding-panel.slide-out {
+  transform: translateX(-100%);
+}
+
+/* Cuando la puerta se desliza */
+.sliding-panel.slide-out {
+  transform: translateX(-100%);
+}
+

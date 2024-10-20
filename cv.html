@@ -13,11 +13,20 @@
     
     <!-- Enlace a tu propio CSS (opcional) -->
     <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="Logotipo.png" type="image/png">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Portafolio</a>
+            
+            <button id="mode-toggle" class="btn btn-secondary">
+                <i class="fas fa-sun"></i> Cambiar a Modo Oscuro
+            </button>
+
+
+
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,56 +51,56 @@
 
     <!-- Contenido Principal -->
     <header class="main-header">
-       
-           
-                <div id="carouselExample" class="carousel slide" data-ride="carousel">  
-                     
-                    <div class="carousel-inner">
-                
-                        <div class="carousel-item active" data-interval="4000"> 
-                            <img src="portada1.png" class="d-block w-100" alt="Imagen 1">
-                        </div>
-                        <div class="carousel-item" data-interval="3000">
-                            <img src="imagen2.jpg" class="d-block w-100" alt="Imagen 2">
-                        </div>
-                        <div class="carousel-item" data-interval="3000">
-                            <img src="imagen3.jpg" class="d-block w-100" alt="Imagen 3">
-                        </div>
-                        <div class="carousel-item" data-interval="3000">
-                            <img src="imagen4.jpg" class="d-block w-100" alt="Imagen 4">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Siguiente</span>
-                    </a>
-                    <div class="overlay">
-                        <h1>Hola, soy Ezequiel González</h1>
-                        <p>Programador autodidacta con experiencia en Java, SQL y desarrollo web.</p>
-                    </div>
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">  
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="4000"> 
+                    <img src="portada1.png" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item" data-interval="3000">
+                    <img src="imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item" data-interval="3000">
+                    <img src="imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+                </div>
+                <div class="carousel-item" data-interval="3000">
+                    <img src="imagen4.jpg" class="d-block w-100" alt="Imagen 4">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+            <div class="overlay">
+                <h1>Hola, soy Ezequiel González</h1>
+                <p>Programador autodidacta con experiencia en Java, SQL y desarrollo web.</p>
+            </div>
         </div>
     </header>
 
     <main class="container my-5">
-
         <section id="about-me" class="about-section">
-            <div class="container d-flex align-items-center">
-                <img src="yo.png"  alt="Ezequiel González" class="profile-img">
+            <div class="container">
+                <!-- Contenedor que actúa como "puerta" -->
+                <div class="sliding-panel" id="sliding-panel">
+                    <img src="yo.png" alt="Ezequiel González" class="profile-img">
                     <h2>Quién Soy</h2>
                 </div>
-                <div id="about-content" class="about-text" style="display: none;">
-                    <p>Hola, soy <strong>Ezequiel González</strong>, un programador autodidacta apasionado por la tecnología...</p>
+        
+                <!-- Contenido que se revelará cuando la "puerta" se mueva -->
+                <div class="about-content" id="about-content">
+                    <p>Hola, soy <strong>Ezequiel González</strong>, un programador autodidacta apasionado por la tecnología y el desarrollo de software. Mi objetivo es seguir creciendo y aportar soluciones innovadoras.</p>
                 </div>
-                <!-- Botón para mostrar/ocultar el contenido -->
-                <button onclick="toggleAbout()" class="btn btn-primary">Ver más</button>
-           
+            </div>
+        
+            <!-- Botón para controlar el deslizamiento -->
+            <button onclick="toggleSlide()" class="btn btn-primary">Ver más</button>
         </section>
-
-        <section id="projects">
+        
+        <section id="projects" class="section-bg">
             <h2 class="text-center">Mis Proyectos</h2>
             <ul class="list-group">
                 <li class="list-group-item"><a href="#">Aplicación de Gestión de Clientes</a></li>
@@ -99,8 +108,8 @@
                 <li class="list-group-item"><a href="#">Otro Proyecto Relevante</a></li>
             </ul>
         </section>
-
-        <section id="contact" class="my-5">
+    
+        <section id="contact" class="my-5 section-bg">
             <h2 class="text-center">Contacto</h2>
             <ul class="list-group">
                 <li class="list-group-item">
@@ -117,7 +126,6 @@
                 </li>
             </ul>
         </section>
-        
     </main>
 
     <footer class="bg-dark text-white text-center p-3">
@@ -141,8 +149,81 @@
                 btn.textContent = "Ver más"; // Cambia el texto del botón
             }
         }
-        </script>
-        
+    </script>
 
+<script>
+ // Verifica el modo actual y establece el modo inicial
+const body = document.body;
+const toggleButton = document.getElementById("mode-toggle");
+
+// Cambiar modo basado en la clase del cuerpo
+function updateMode() {
+    if (body.classList.contains("dark-mode")) {
+        toggleButton.textContent = "Cambiar a Modo Claro";
+        localStorage.setItem("mode", "dark"); // Guarda la preferencia en localStorage
+    } else {
+        toggleButton.textContent = "Cambiar a Modo Oscuro";
+        localStorage.setItem("mode", "light"); // Guarda la preferencia en localStorage
+    }
+}
+
+// Función para alternar entre modos
+toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    body.classList.toggle("light-mode");
+    
+    // Actualiza selectores
+    const selects = document.querySelectorAll("select");
+    selects.forEach(select => {
+        select.classList.toggle("dark-mode");
+        select.classList.toggle("light-mode");
+    });
+
+    updateMode();
+});
+
+// Establece el modo inicial según la preferencia del usuario (si existe)
+const preferredMode = localStorage.getItem("mode");
+if (preferredMode === "dark") {
+    body.classList.add("dark-mode");
+    const selects = document.querySelectorAll("select");
+    selects.forEach(select => {
+        select.classList.add("dark-mode");
+    });
+} else {
+    body.classList.add("light-mode");
+    const selects = document.querySelectorAll("select");
+    selects.forEach(select => {
+        select.classList.add("light-mode");
+    });
+}
+function updateMode() {
+    if (body.classList.contains("dark-mode")) {
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Cambiar a Modo Claro';
+        localStorage.setItem("mode", "dark"); // Guarda la preferencia en localStorage
+    } else {
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Cambiar a Modo Oscuro';
+        localStorage.setItem("mode", "light"); // Guarda la preferencia en localStorage
+    }
+}
+updateMode();
+
+</script>
+
+<script>
+    function toggleSlide() {
+        var panel = document.getElementById('sliding-panel');
+        var content = document.getElementById('about-content');
+        
+        // Desplazar la "puerta" hacia un lado
+        panel.classList.toggle('slide-out');
+        
+        // Mostrar el contenido desplazando hacia la izquierda
+        content.classList.toggle('show');
+    }
+    </script>
+
+    
 </body>
 </html>
+
