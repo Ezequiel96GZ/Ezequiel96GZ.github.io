@@ -42,13 +42,55 @@
 
     <!-- Contenido Principal -->
     <header class="main-header">
-        <div class="container text-center">
-            <h1 class="">Hola, soy Ezequiel González</h1>
-            <p>Programador autodidacta con experiencia en Java, SQL y desarrollo web.</p>
+       
+           
+                <div id="carouselExample" class="carousel slide" data-ride="carousel">  
+                     
+                    <div class="carousel-inner">
+                
+                        <div class="carousel-item active" data-interval="4000"> 
+                            <img src="images/portada.png" class="d-block w-100" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item" data-interval="3000">
+                            <img src="imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item" data-interval="3000">
+                            <img src="imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+                        </div>
+                        <div class="carousel-item" data-interval="3000">
+                            <img src="imagen4.jpg" class="d-block w-100" alt="Imagen 4">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                    <div class="overlay">
+                        <h1>Hola, soy Ezequiel González</h1>
+                        <p>Programador autodidacta con experiencia en Java, SQL y desarrollo web.</p>
+                    </div>
         </div>
     </header>
 
     <main class="container my-5">
+
+        <section id="about-me" class="about-section">
+            <div class="container d-flex align-items-center">
+                <img src="images/yo.png"  alt="Ezequiel González" class="profile-img">
+                    <h2>Quién Soy</h2>
+                </div>
+                <div id="about-content" class="about-text" style="display: none;">
+                    <p>Hola, soy <strong>Ezequiel González</strong>, un programador autodidacta apasionado por la tecnología...</p>
+                </div>
+                <!-- Botón para mostrar/ocultar el contenido -->
+                <button onclick="toggleAbout()" class="btn btn-primary">Ver más</button>
+           
+        </section>
+
         <section id="projects">
             <h2 class="text-center">Mis Proyectos</h2>
             <ul class="list-group">
@@ -86,5 +128,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleAbout() {
+            var content = document.getElementById("about-content");
+            var btn = document.querySelector(".btn");
+        
+            if (content.style.display === "none") {
+                content.style.display = "block"; // Mostrar contenido
+                btn.textContent = "Ver menos"; // Cambia el texto del botón
+            } else {
+                content.style.display = "none"; // Ocultar contenido
+                btn.textContent = "Ver más"; // Cambia el texto del botón
+            }
+        }
+        </script>
+        
+
 </body>
 </html>
