@@ -4,66 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio - Ezequiel González</title>
-    
+
     <!-- Enlace a Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Enlace a Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
     <!-- Enlace a tu propio CSS (opcional) -->
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon" href="Logotipo.png" type="image/png">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            
-            <button id="mode-toggle" class="btn btn-secondary">
-                <i class="fas fa-sun"></i> Cambiar a Modo Oscuro
-            </button>
-
-
-
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link projects" href="#projects"><i class="fas fa-project-diagram"></i> Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link youtube" href="https://www.youtube.com/@ezequiel_gz" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link linkedin" href="https://www.linkedin.com/in/ezequielgz/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link email" href="mailto:ezequiel_gz@example.com"><i class="fas fa-envelope"></i> Contacto</a>
-                    </li>
-                </ul>
-            </div>
+          <!-- Botón para cambiar el modo oscuro/claro a la izquierda -->
+          <button id="mode-toggle" class="btn btn-secondary mr-auto">
+            <i class="fas fa-moon"></i> Cambiar a Modo Oscuro
+          </button>
+      
+          <!-- Botón hamburguesa para colapsar el menú (ubicado a la derecha) -->
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Menú de navegación -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link projects" href="#projects"><i class="fas fa-project-diagram"></i> Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link youtube" href="https://www.youtube.com/@ezequiel_gz" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link linkedin" href="https://www.linkedin.com/in/ezequielgz/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link email" href="mailto:ezequiel_gz@example.com"><i class="fas fa-envelope"></i> Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-
+      </nav>
     <!-- Contenido Principal -->
     <header class="main-header">
-        <div id="carouselExample" class="carousel slide" data-ride="carousel">  
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="4000"> 
+                <div class="carousel-item active" data-interval="5000">
                     <img src="portada1.png" class="d-block w-100" alt="Imagen 1">
                 </div>
-                <div class="carousel-item" data-interval="3000">
-                    <img src="imagen2.jpg" class="d-block w-100" alt="Imagen 2">
-                </div>
-                <div class="carousel-item" data-interval="3000">
-                    <img src="imagen3.jpg" class="d-block w-100" alt="Imagen 3">
-                </div>
-                <div class="carousel-item" data-interval="3000">
-                    <img src="imagen4.jpg" class="d-block w-100" alt="Imagen 4">
+                <div class="carousel-item" data-interval="5000">
+                    <img src="imagen2.gif" class="d-block w-100" alt="Imagen 2">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
@@ -89,17 +83,19 @@
                     <img src="yo.png" alt="Ezequiel González" class="profile-img">
                     <h2>Quién Soy</h2>
                 </div>
-        
+
                 <!-- Contenido que se revelará cuando la "puerta" se mueva -->
                 <div class="about-content" id="about-content">
-                    <p>Hola, soy <strong>Ezequiel González</strong>, un programador autodidacta apasionado por la tecnología y el desarrollo de software. Mi objetivo es seguir creciendo y aportar soluciones innovadoras.</p>
+                    <p>Hola, soy <strong>Ezequiel González</strong>, un programador autodidacta apasionado por la
+                        tecnología y el desarrollo de software. Mi objetivo es seguir creciendo y aportar soluciones
+                        innovadoras.</p>
                 </div>
             </div>
-        
+
             <!-- Botón para controlar el deslizamiento -->
             <button onclick="toggleSlide()" class="btn btn-primary">Ver más</button>
         </section>
-        
+
         <section id="projects" class="section-bg">
             <h2 class="text-center">Mis Proyectos</h2>
             <ul class="list-group">
@@ -108,20 +104,20 @@
                 <li class="list-group-item"><a href="#">Otro Proyecto Relevante</a></li>
             </ul>
         </section>
-    
+
         <section id="contact" class="my-5 section-bg">
             <h2 class="text-center">Contacto</h2>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <i class="fab fa-youtube"></i> YouTube: 
+                    <i class="fab fa-youtube"></i> YouTube:
                     <a href="https://www.youtube.com/@ezequiel_gz" target="_blank">/Ezequiel_GZ</a>
                 </li>
                 <li class="list-group-item">
-                    <i class="fas fa-envelope"></i> Email: 
+                    <i class="fas fa-envelope"></i> Email:
                     <a href="mailto:ezequiel1996gonzalez@hotmail.com">Ezequiel1996gonzalez@hotmail.com</a>
                 </li>
                 <li class="list-group-item">
-                    <i class="fab fa-linkedin"></i> LinkedIn: 
+                    <i class="fab fa-linkedin"></i> LinkedIn:
                     <a href="https://www.linkedin.com/in/ezequielgz/" target="_blank">/EzequielGZ</a>
                 </li>
             </ul>
@@ -132,98 +128,43 @@
         <p>&copy; 2024 Ezequiel González. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Enlace a Bootstrap JS y jQuery -->
+    <!-- Scripts de Bootstrap y jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function toggleAbout() {
-            var content = document.getElementById("about-content");
-            var btn = document.querySelector(".btn");
-        
-            if (content.style.display === "none") {
-                content.style.display = "block"; // Mostrar contenido
-                btn.textContent = "Ver menos"; // Cambia el texto del botón
-            } else {
-                content.style.display = "none"; // Ocultar contenido
-                btn.textContent = "Ver más"; // Cambia el texto del botón
-            }
-        }
-    </script>
 
-<script>
- // Verifica el modo actual y establece el modo inicial
-const body = document.body;
+    <!-- Script para alternar entre modos oscuro y claro -->
+    <script>
+  const body = document.body;
 const toggleButton = document.getElementById("mode-toggle");
 
-// Cambiar modo basado en la clase del cuerpo
-function updateMode() {
-    if (body.classList.contains("dark-mode")) {
-        toggleButton.textContent = "Cambiar a Modo Claro";
-        localStorage.setItem("mode", "dark"); // Guarda la preferencia en localStorage
-    } else {
-        toggleButton.textContent = "Cambiar a Modo Oscuro";
-        localStorage.setItem("mode", "light"); // Guarda la preferencia en localStorage
-    }
-}
-
-// Función para alternar entre modos
-toggleButton.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    body.classList.toggle("light-mode");
-    
-    // Actualiza selectores
-    const selects = document.querySelectorAll("select");
-    selects.forEach(select => {
-        select.classList.toggle("dark-mode");
-        select.classList.toggle("light-mode");
-    });
-
-    updateMode();
-});
-
-// Establece el modo inicial según la preferencia del usuario (si existe)
-const preferredMode = localStorage.getItem("mode");
-if (preferredMode === "dark") {
-    body.classList.add("dark-mode");
-    const selects = document.querySelectorAll("select");
-    selects.forEach(select => {
-        select.classList.add("dark-mode");
-    });
-} else {
-    body.classList.add("light-mode");
-    const selects = document.querySelectorAll("select");
-    selects.forEach(select => {
-        select.classList.add("light-mode");
-    });
-}
+// Función para alternar modos
 function updateMode() {
     if (body.classList.contains("dark-mode")) {
         toggleButton.innerHTML = '<i class="fas fa-sun"></i> Cambiar a Modo Claro';
-        localStorage.setItem("mode", "dark"); // Guarda la preferencia en localStorage
+        localStorage.setItem("mode", "dark"); // Guardar preferencia en localStorage
     } else {
         toggleButton.innerHTML = '<i class="fas fa-moon"></i> Cambiar a Modo Oscuro';
-        localStorage.setItem("mode", "light"); // Guarda la preferencia en localStorage
+        localStorage.setItem("mode", "light"); // Guardar preferencia en localStorage
     }
 }
-updateMode();
 
+// Evento de clic para alternar el modo
+toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    body.classList.toggle("light-mode");
+    updateMode(); // Actualiza el botón
+});
+
+// Verificar la preferencia guardada en localStorage
+const preferredMode = localStorage.getItem("mode");
+if (preferredMode === "dark") {
+    body.classList.add("dark-mode");
+} else {
+    body.classList.add("light-mode");
+}
+
+updateMode(); // Inicializa el estado del botón al cargar la página
 </script>
-
-<script>
-    function toggleSlide() {
-        var panel = document.getElementById('sliding-panel');
-        var content = document.getElementById('about-content');
-        
-        // Desplazar la "puerta" hacia un lado
-        panel.classList.toggle('slide-out');
-        
-        // Mostrar el contenido desplazando hacia la izquierda
-        content.classList.toggle('show');
-    }
-    </script>
-
-    
 </body>
 </html>
-

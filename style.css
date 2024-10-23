@@ -1,302 +1,268 @@
-
-
+/* Header principal */ 
 .main-header {
   position: relative;
-  height: 350px; /* Ajusta la altura según lo que necesites */
-  padding: 5px 0; /* Espacio superior e inferior alrededor del contenido */
-  background-color: #000000; /* Color de fondo opcional */
+  height: 350px;
+  padding: 5px 0;
+  background-color: #000000;
 }
 
-/* Superpone el texto sobre el carrusel */
+/* Superposición del texto sobre el carrusel */
 .overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* Color del texto */
+  color: white;
   text-align: center;
-  z-index: 10; /* Asegura que el texto esté por encima del carrusel */
+  z-index: 10;
+}
+
+.overlay h1, .overlay p {
+  color: #ffffff !important;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8), -3px -3px 5px rgba(0, 0, 0, 0.8);
 }
 
 .overlay h1 {
-  color: #ffffff !important;
   font-size: 3rem;
-  margin: 0;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8),
-              -3px -3px 5px rgba(0, 0, 0, 0.8);
 }
 
 .overlay p {
-  color: #ffffff !important;
   font-size: 1.25rem;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8),
-              -3px -3px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Ajusta el tamaño del carrusel para que ocupe el 100% del ancho */
+/* Carrusel */
 .carousel-inner img {
   width: 100%;
-  height: 350px; /* Asegura que el carrusel coincida con la altura */
-  object-fit: cover; /* Mantiene la proporción de las imágenes */
+  height: 350px;
+  object-fit: cover;
 }
 
 /* Iconos de navegación - Efecto hover */
 .nav-link i {
-  transition: color 0.3s ease-in-out;
+  font-size: 1.5rem;
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .nav-link:hover i {
-  color: #000; /* Color general por defecto */
+  font-size: 1.8rem;
 }
 
 .nav-link.youtube:hover i {
-  color: #FF0000; /* Rojo para YouTube */
+  color: #FF0000;
 }
 
 .nav-link.linkedin:hover i {
-  color: #0077b5; /* Azul para LinkedIn */
+  color: #0077b5;
 }
 
 .nav-link.email:hover i {
-  color: #34a853; /* Verde para email (o puedes elegir otro color) */
+  color: #34a853;
 }
 
 .nav-link.projects:hover i {
-  color: #ff9800; /* Naranja para proyectos */
+  color: #ff9800;
 }
 
-.nav-link i {
-  font-size: 1.5rem; /* Cambia este valor para ajustar el tamaño */
-  transition: font-size 0.3s ease-in-out;
-}
-
-.nav-link:hover i {
-  font-size: 1.8rem; /* Íconos más grandes al pasar el cursor */
-}
-
+/* Navbar */
 nav {
   display: block;
   width: 100%;
-  background-color: #f8f9fa; /* Color del navbar */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombras opcionales */
-  padding: 10px 0; /* Ajusta el espacio alrededor del navbar */
+  background-color: #f8f9fa;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
 }
 
-/* Estilos para el contenido principal */
-.main-header h1 {
-  font-size: 3rem; /* Tamaño del H1 */
-  color: #333;
-}
-
-.main-header p {
-  font-size: 1.25rem; /* Tamaño del párrafo */
-  color: #666;
-}
-
-/* Centrar el contenido dentro de su contenedor */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.about-section {
-  background-color: #f8f9fa; /* Fondo suave */
-  padding: 20px 0;
-  text-align: center;
-}
-
-.container {
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; /* Hace que la imagen sea redonda */
-  margin-right: 10px; /* Espacio entre la imagen y el título */
-  object-fit: cover;
-}
-
-h2 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-/* Estilo para el texto oculto que se despliega */
-.about-text {
-  max-width: 800px;
-  margin: 20px auto;
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.8;
-  display: none; /* Inicia oculto */
-}
-
-.about-section {
-  background-color: #f8f9fa; /* Fondo suave */
-  padding: 20px 0;
-  text-align: center;
-  margin-bottom: 40px; /* Espacio debajo de la sección "Quién Soy" */
-}
-
-#projects, #contact {
-  margin-bottom: 40px; /* Espacio debajo de las secciones de "Proyectos" y "Contacto" */
-}
-/* Estilos generales */
 /* Estilos generales */
 body {
   transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
 }
 
-/* Modo claro */
+/* Modo Claro */
 body.light-mode {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #000000; /* Texto negro */
+  background-color: #ffffff;
+  color: #000000;
 }
 
-/* Modo oscuro */
+body.light-mode nav {
+  background-color: #f8f9fa; /* Fondo claro para el navbar */
+  color: #000000;
+}
+
+body.light-mode nav a {
+  color: #000000;
+}
+
+body.light-mode nav a:hover {
+  color: #007bff;
+}
+
+/* Modo Oscuro */
 body.dark-mode {
-  background-color: #121212; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
+  background-color: #121212;
+  color: #ffffff;
 }
 
-/* Estilos para el selector en modo claro */
-select {
-  background-color: #ffffff; /* Fondo blanco por defecto */
-  color: #000000; /* Texto negro por defecto */
-  border: 1px solid #ccc; /* Borde claro */
-  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+body.dark-mode nav {
+  background-color: #333333; /* Fondo oscuro para el navbar */
+  color: #ffffff;
 }
 
-/* Estilos para el selector en modo oscuro */
-body.dark-mode select {
-  background-color: #333; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
-  border: 1px solid #555; /* Borde más oscuro */
+body.dark-mode nav a {
+  color: #ffffff;
 }
 
-/* Estilo para los option - no necesitas clases específicas, ya que no se aplican */
-option {
-  background-color: #ffffff; /* Fondo blanco por defecto */
-  color: #000000; /* Texto negro por defecto */
+body.dark-mode nav a:hover {
+  color: #ff9800;
 }
 
-/* Cambia el color de fondo y texto cuando el body esté en modo oscuro */
-body.dark-mode option {
-  background-color: #333; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
+/* Estilo para el botón de hamburguesa en pantallas pequeñas */
+.navbar-toggler {
+  margin-right: right;
+  border-color: rgb(0, 0, 0); /* Color del botón en modo claro */
+  padding: 10px; /* Ajusta el padding para aumentar la altura del botón */
+  height: 50px; /* Establece una altura mínima para el botón */
 }
 
-.section-bg {
-  background-color: #f8f9fa; /* Color de fondo */
-  padding: 20px; /* Espaciado interno */
-  margin-bottom: 40px; /* Espacio entre secciones */
-  border-radius: 8px; /* Bordes redondeados (opcional) */
+body.dark-mode .navbar-toggler {
+  border-color: rgb(255, 255, 255); /* Color del botón en modo oscuro */
 }
 
-body.light-mode .section-bg {
-  background-color: #f8f9fa; /* Fondo claro */
-}
-
-/* Modo oscuro */
-body.dark-mode .section-bg {
-  background-color: #1e1e1e; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
-}
-
-.list-group {
-  margin-bottom: 20px; /* Espacio debajo de la lista */
-}
-
-/* Estilos para el modo claro */
-body.light-mode .list-group-item {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #000000; /* Texto negro */
-}
-
-body.light-mode .list-group-item a {
-  color: #007bff; /* Color del enlace */
-}
-
-/* Estilos para el modo oscuro */
-body.dark-mode .list-group-item {
-  background-color: #333; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
-}
-
-body.dark-mode .list-group-item a {
-  color: #ffffff; /* Color del enlace en modo oscuro */
-}
-
-/* Opcional: Cambiar color al pasar el mouse sobre los enlaces en modo oscuro */
-body.dark-mode .list-group-item a:hover {
-  color: #ff9800; /* Naranja, por ejemplo */
-}
-
-/* Opcional: Cambiar color al pasar el mouse sobre los elementos de la lista */
-body.dark-mode .list-group-item:hover {
-  background-color: #444; /* Fondo más claro en hover */
-}
-
-.about-section {
+/* Estilo para el icono del botón de hamburguesa */
+.navbar-toggler .navbar-toggler-icon {
+  display: block;
+  width: 30px; /* Ancho de las líneas */
+  height: 4px; /* Grosor de las líneas */
+  background-color: rgb(255, 170, 0); /* Color de las líneas */
   position: relative;
-  overflow: hidden; /* Evita que se vea contenido fuera del área visible */
-  width: 100%;
+}
+
+/* Líneas del botón hamburguesa */
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  content: '';
+  display: block;
+  width: 30px; /* Ancho de las líneas */
+  height: 4px; /* Grosor de las líneas */
+  background-color: rgb(255, 170, 0); /* Color de las líneas */
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -10px; /* Espaciado de la línea superior */
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+  bottom: -10px; /* Espaciado de la línea inferior */
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block; /* Asegúrar de que esté visible */
+  }
+}
+/* Estilos de select en modo claro y oscuro */
+select {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode select {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+/* Opciones del select */
+option {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode option {
+  background-color: #333;
+  color: #ffffff;
+}
+
+/* Secciones generales */
+.section-bg {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+body.dark-mode .section-bg {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Lista de proyectos y contacto */
+.list-group {
+  margin-bottom: 20px;
+}
+
+body.light-mode .list-group-item {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode .list-group-item {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .list-group-item a:hover {
+  color: #ff9800;
+}
+
+/* Estilos para la sección "Quién Soy" y el deslizamiento */
+.about-section {
+  background-color: #f8f9fa;
   padding: 20px 0;
   text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
-/* Contenedor "puerta corrediza" */
+body.dark-mode .about-section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Panel deslizante */
 .sliding-panel {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  transition: transform 0.5s ease-in-out; /* Transición suave */
+  transition: transform 0.5s ease-in-out;
   z-index: 2;
 }
 
-/* Imagen redonda */
 .sliding-panel img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-right: 10px;
+  width: 280px;
+  height: 280px;
+  margin-right: right;
 }
 
 .sliding-panel h2 {
   font-size: 2rem;
-  margin: 0;
+   margin-right: auto;
 }
 
-/* Contenido que se desliza desde el lado derecho */
+/* Contenido que se desliza */
 .about-content {
   position: absolute;
   top: 0;
-  left: 100%; /* Inicialmente fuera de la vista */
+  left: 100%;
   width: 100%;
   padding: 20px;
-
   transition: transform 0.5s ease-in-out;
   z-index: 1;
 }
-
-/* Cuando el contenido se muestra */
-.about-content.show {
-  transform: translateX(-100%);
-}
-
-/* Cuando la "puerta" se desplaza */
-.sliding-panel.slide-out {
-  transform: translateX(-100%);
-}
-
-/* Cuando la puerta se desliza */
-.sliding-panel.slide-out {
-  transform: translateX(-100%);
-}
-
