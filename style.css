@@ -19,7 +19,7 @@
 
 .overlay h1, .overlay p {
   color: #ffffff !important;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8), -3px -3px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 3px 3px 5px rgba(210, 72, 72, 0.8), -3px -3px 5px rgba(0, 0, 0, 0.8);
 }
 
 .overlay h1 {
@@ -132,7 +132,7 @@ body.dark-mode .navbar-toggler {
   display: block;
   width: 30px; /* Ancho de las líneas */
   height: 4px; /* Grosor de las líneas */
-  background-color: rgb(255, 170, 0); /* Color de las líneas */
+  background-color: rgb(118, 118, 118); /* Color de las líneas */
   position: relative;
 }
 
@@ -143,7 +143,7 @@ body.dark-mode .navbar-toggler {
   display: block;
   width: 30px; /* Ancho de las líneas */
   height: 4px; /* Grosor de las líneas */
-  background-color: rgb(255, 170, 0); /* Color de las líneas */
+  background-color: rgb(118, 118, 118); /* Color de las líneas */
   position: absolute;
   left: 0;
 }
@@ -215,54 +215,174 @@ body.dark-mode .list-group-item {
 }
 
 body.dark-mode .list-group-item a:hover {
-  color: #ff9800;
+  color: #606060;
 }
 
-/* Estilos para la sección "Quién Soy" y el deslizamiento */
-.about-section {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  text-align: center;
-  margin-bottom: 40px;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
 
 body.dark-mode .about-section {
   background-color: #1e1e1e;
   color: #ffffff;
 }
 
-/* Panel deslizante */
+/* Sección "Quién Soy" */
+.about-section {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Evita desbordamientos */
+}
+
+/* Panel deslizante: configurado para desvanecerse */
 .sliding-panel {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  transition: transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   z-index: 2;
+  width: 100%;
+  opacity: 1; /* Visible inicialmente */
 }
 
-.sliding-panel img {
-  width: 280px;
-  height: 280px;
-  margin-right: right;
+/* Oculta el panel deslizante cuando el contenido está en vista */
+.sliding-panel.hide {
+  opacity: 0; /* Oculto */
+  transform: translateX(-100%); /* Mueve hacia la izquierda */
 }
 
+/* Contenido que se desliza desde el lado derecho */
+.about-content {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Fuera de la vista */
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateX(0); /* Inicialmente en posición */
+  transition: transform 0.5s ease-in-out;
+  opacity: 0; /* Oculto por defecto */
+}
+
+/* Cuando el contenido está visible */
+.about-content.show {
+  transform: translateX(-100%); /* Lo trae a la vista */
+  opacity: 1;
+}
+
+/* Estilo para el panel deslizante con disposición en columna */
+.sliding-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Dispone los elementos en columna */
+  align-items: center; /* Centra los elementos en el centro */
+  padding: 20px;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo para el encabezado */
 .sliding-panel h2 {
   font-size: 2rem;
-   margin-right: auto;
+  margin-bottom: 15px;
+  text-align: right; /* Centra el texto del encabezado */
 }
 
-/* Contenido que se desliza */
+/* Estilo para la imagen */
+.sliding-panel .profile-img {
+  width: 250px; /* Ajusta el ancho de la imagen */
+  height: 250px; /* Ajusta la altura de la imagen */
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+  margin: 15px 0; /* Espacio alrededor de la imagen */
+  object-fit: cover;
+}
+
+/* Estilo para la lista de párrafos */
+.sliding-panel ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0;
+  margin-right: right;
+  text-align: center;
+  width: 100%; /* Asegura que la lista ocupe el ancho completo */
+}
+
+.sliding-panel ul li {
+  margin-right: auto;
+  margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+}
+
+/* Flechas laterales */
+.btn-arrow-left, .btn-arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #007bff;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.btn-arrow-left {
+  left: 0; /* Posición a la izquierda */
+  margin-left: 10px;
+}
+
+.btn-arrow-right {
+  right: 0; /* Posición a la derecha */
+  margin-right: 10px;
+}
+
+.btn-arrow-left:hover, .btn-arrow-right:hover {
+  color: #0056b3;
+}
+
+/* Panel deslizante */
+.sliding-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  width: 100%;
+  opacity: 1;
+}
+
+/* Oculta el panel deslizante cuando el contenido está en vista */
+.sliding-panel.hide {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* Configuración del contenido deslizante */
 .about-content {
   position: absolute;
   top: 0;
   left: 100%;
   width: 100%;
+  height: auto;
   padding: 20px;
+  box-sizing: border-box;
+  transform: translateX(0);
   transition: transform 0.5s ease-in-out;
-  z-index: 1;
+  opacity: 0;
 }
+
+.about-content.show {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+
+
+#pc {
+  max-width: 10%; /* La imagen no será más grande que su contenedor */
+  height: auto; 
+  margin-right: right;
+}
+

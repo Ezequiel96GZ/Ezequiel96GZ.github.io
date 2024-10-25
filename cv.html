@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,154 +18,227 @@
     <link rel="icon" href="Logotipo.png" type="image/png">
 </head>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <!-- Botón para cambiar el modo oscuro/claro a la izquierda -->
-          <button id="mode-toggle" class="btn btn-secondary mr-auto">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- Botón para cambiar el modo oscuro/claro a la izquierda -->
+        <button id="mode-toggle" class="btn btn-secondary mr-auto">
             <i class="fas fa-moon"></i> Cambiar a Modo Oscuro
-          </button>
-      
-          <!-- Botón hamburguesa para colapsar el menú (ubicado a la derecha) -->
-          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+
+        <!-- Botón hamburguesa para colapsar el menú (ubicado a la derecha) -->
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <!-- Menú de navegación -->
-          <div class="collapse navbar-collapse" id="navbarNav">
+        </button>
+
+        <!-- Menú de navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link projects" href="#projects"><i class="fas fa-project-diagram"></i> Proyectos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link youtube" href="https://www.youtube.com/@ezequiel_gz" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link linkedin" href="https://www.linkedin.com/in/ezequielgz/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link email" href="mailto:ezequiel_gz@example.com"><i class="fas fa-envelope"></i> Contacto</a>
-              </li>
+                <li class="nav-item">
+                    <a class="nav-link projects" href="#projects"><i class="fas fa-project-diagram"></i> Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link youtube" href="https://www.youtube.com/@ezequiel_gz" target="_blank"><i
+                            class="fab fa-youtube"></i> YouTube</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link linkedin" href="https://www.linkedin.com/in/ezequielgz/" target="_blank"><i
+                            class="fab fa-linkedin"></i> LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link email" href="mailto:ezequiel_gz@example.com"><i class="fas fa-envelope"></i>
+                        Contacto</a>
+                </li>
             </ul>
-          </div>
         </div>
-      </nav>
-    <!-- Contenido Principal -->
-    <header class="main-header">
-        <div id="carouselExample" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="5000">
-                    <img src="portada1.png" class="d-block w-100" alt="Imagen 1">
-                </div>
-                <div class="carousel-item" data-interval="5000">
-                    <img src="imagen2.gif" class="d-block w-100" alt="Imagen 2">
-                </div>
+    </div>
+</nav>
+<!-- Contenido Principal -->
+<header class="main-header">
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="5000">
+                <img src="portada1.png" class="d-block w-100" alt="Imagen 1">
             </div>
-            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
-            </a>
-            <div class="overlay">
-                <h1>Hola, soy Ezequiel González</h1>
-                <p>Programador autodidacta con experiencia en Java, SQL y desarrollo web.</p>
+            <div class="carousel-item" data-interval="5000">
+                <img src="imagen2.gif" class="d-block w-100" alt="Imagen 2">
             </div>
         </div>
-    </header>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+        <div class="overlay">
+            <h1>Hola, soy Ezequiel González</h1>
+            <p>Programador autodidacta con experiencia en Java, SQL y desarrollo web.</p>
+        </div>
+    </div>
+</header>
 
-    <main class="container my-5">
-        <section id="about-me" class="about-section">
-            <div class="container">
-                <!-- Contenedor que actúa como "puerta" -->
-                <div class="sliding-panel" id="sliding-panel">
-                    <img src="yo.png" alt="Ezequiel González" class="profile-img">
-                    <h2>Quién Soy</h2>
-                </div>
+<main class="container my-5">
+    <section id="about-me" class="about-section">
+        <div class="container">
+            
+            <button onclick="toggleSlideBack()" class="btn-arrow-left">
+                <i class="fas fa-arrow-left"></i> <!-- Icono de flecha izquierda -->
+            </button>
 
-                <!-- Contenido que se revelará cuando la "puerta" se mueva -->
-                <div class="about-content" id="about-content">
-                    <p>Hola, soy <strong>Ezequiel González</strong>, un programador autodidacta apasionado por la
-                        tecnología y el desarrollo de software. Mi objetivo es seguir creciendo y aportar soluciones
-                        innovadoras.</p>
-                </div>
+            <!-- Contenedor que actúa como "puerta" -->
+            <div class="sliding-panel" id="sliding-panel">
+                <img src="yo.png" alt="Ezequiel González" class="profile-img">
+                <h2>Quién soy</h2>
+                <ul>
+                    <p>Edad : 28 Años</p>
+                    <p>Signo : Piscis (como Justin) </p>
+                    <P>Lenguaje de Programacion: JAVA </P>
+                    <p>Libro favorito : 1984 - George orwell </p>
+                    <p>Pelicula Favorita : Batman caballero de la noche</p>
+                    <p>Hobbies: jugar a la Play Station 2(La mejor consola) - Guitarra - Boxeo - Leer</p>
+
+
+                </ul>
             </div>
 
-            <!-- Botón para controlar el deslizamiento -->
-            <button onclick="toggleSlide()" class="btn btn-primary">Ver más</button>
-        </section>
 
-        <section id="projects" class="section-bg">
-            <h2 class="text-center">Mis Proyectos</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><a href="#">Aplicación de Gestión de Clientes</a></li>
-                <li class="list-group-item"><a href="#">Simulación Robótica en ROBOGUIDE</a></li>
-                <li class="list-group-item"><a href="#">Otro Proyecto Relevante</a></li>
-            </ul>
-        </section>
 
-        <section id="contact" class="my-5 section-bg">
-            <h2 class="text-center">Contacto</h2>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <i class="fab fa-youtube"></i> YouTube:
-                    <a href="https://www.youtube.com/@ezequiel_gz" target="_blank">/Ezequiel_GZ</a>
-                </li>
-                <li class="list-group-item">
-                    <i class="fas fa-envelope"></i> Email:
-                    <a href="mailto:ezequiel1996gonzalez@hotmail.com">Ezequiel1996gonzalez@hotmail.com</a>
-                </li>
-                <li class="list-group-item">
-                    <i class="fab fa-linkedin"></i> LinkedIn:
-                    <a href="https://www.linkedin.com/in/ezequielgz/" target="_blank">/EzequielGZ</a>
-                </li>
-            </ul>
-        </section>
-    </main>
+            <!-- Contenido que se revelará cuando la "puerta" se mueva -->
+            <div class="about-content" id="about-content">
+                <h3><br> Sobre Mí: Mi Camino hacia la Programación </br></h3>
+                <p>Mi nombre es <strong>Ezequiel González</strong>, Desde muy pequeño, siempre me atrajo el mundo de la
+                    tecnología. Mi primera computadora fue una <strong>Compaq All-in-One cds524</strong> con Windows 95
 
-    <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; 2024 Ezequiel González. Todos los derechos reservados.</p>
-    </footer>
+                    <!--<img src="mi1erapc.jpg" alt="compu" id="pc">-->
+                    y preguntarme cómo funcionaban por dentro, pero por
+                    mucho tiempo, no me animé a dar ese paso hacia la programación. Decidí seguir un camino diferente y
+                    terminé trabajando en gastronomía, algo que también me apasionaba.
+                </p>
 
-    <!-- Scripts de Bootstrap y jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <p>Trabajé varios años en el sector gastronómico, donde perfeccioné mis habilidades como barista y en la
+                    elaboración de pizzas. La dedicación y el arte detrás de cada café o pizza me enseñaron la
+                    importancia de la precisión y la atención al detalle.Sin embargo, aunque disfrutaba lo que hacía, en
+                    el fondo sentía que algo faltaba. El mundo de la programación siempre había estado presente en mi
+                    mente, esperando el momento adecuado.</p>
 
-    <!-- Script para alternar entre modos oscuro y claro -->
-    <script>
-  const body = document.body;
-const toggleButton = document.getElementById("mode-toggle");
 
-// Función para alternar modos
-function updateMode() {
-    if (body.classList.contains("dark-mode")) {
-        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Cambiar a Modo Claro';
-        localStorage.setItem("mode", "dark"); // Guardar preferencia en localStorage
-    } else {
-        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Cambiar a Modo Oscuro';
-        localStorage.setItem("mode", "light"); // Guardar preferencia en localStorage
+                <h4>Decisión de Cambio: Mi salto hacia la programación </h4>
+                <p>
+                    Un día, decidí que era hora de cambiar. Tomé la iniciativa de inscribirme en la Diplomatura de
+                    Desarrollo Web, y fue en ese momento cuando me di cuenta de que esto es lo mío. Aunque al principio
+                    fue un reto, me di cuenta de que mi capacidad de resolución de problemas y la lógica que aplicaba
+                    como barista se podían trasladar al mundo de la programación.
+                    Ahora, con sólidos conocimientos en Java, SQL, desarrollo web y aplicaciones, puedo decir con
+                    orgullo que este cambio valió la pena. Hoy en día me siento más motivado que nunca para seguir
+                    aprendiendo y creciendo en este increíble mundo de la tecnología.
+                </p>
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <button onclick="toggleSlide()" class="btn-arrow-right">
+            <i class="fas fa-arrow-right"></i> <!-- Icono de flecha derecha -->
+        </button>
+    </section>
+
+    <section id="projects" class="section-bg">
+        <h2 class="text-center">Mis Proyectos</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="#">Aplicación de Gestión de Clientes</a></li>
+            <li class="list-group-item"><a href="#">Simulación Robótica en ROBOGUIDE</a></li>
+            <li class="list-group-item"><a href="#">Otro Proyecto Relevante</a></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="my-5 section-bg">
+        <h2 class="text-center">Contacto</h2>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <i class="fab fa-youtube"></i> YouTube:
+                <a href="https://www.youtube.com/@ezequiel_gz" target="_blank">/Ezequiel_GZ</a>
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-envelope"></i> Email:
+                <a href="mailto:ezequiel1996gonzalez@hotmail.com">Ezequiel1996gonzalez@hotmail.com</a>
+            </li>
+            <li class="list-group-item">
+                <i class="fab fa-linkedin"></i> LinkedIn:
+                <a href="https://www.linkedin.com/in/ezequielgz/" target="_blank">/EzequielGZ</a>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2024 Ezequiel González. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Scripts de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Script para alternar entre modos oscuro y claro -->
+<script>
+    const body = document.body;
+    const toggleButton = document.getElementById("mode-toggle");
+
+    // Función para alternar modos
+    function updateMode() {
+        if (body.classList.contains("dark-mode")) {
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i> Cambiar a Modo Claro';
+            localStorage.setItem("mode", "dark"); // Guardar preferencia en localStorage
+        } else {
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i> Cambiar a Modo Oscuro';
+            localStorage.setItem("mode", "light"); // Guardar preferencia en localStorage
+        }
     }
-}
 
-// Evento de clic para alternar el modo
-toggleButton.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    body.classList.toggle("light-mode");
-    updateMode(); // Actualiza el botón
-});
+    // Evento de clic para alternar el modo
+    toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        body.classList.toggle("light-mode");
+        updateMode(); // Actualiza el botón
+    });
 
-// Verificar la preferencia guardada en localStorage
-const preferredMode = localStorage.getItem("mode");
-if (preferredMode === "dark") {
-    body.classList.add("dark-mode");
-} else {
-    body.classList.add("light-mode");
-}
+    // Verificar la preferencia guardada en localStorage
+    const preferredMode = localStorage.getItem("mode");
+    if (preferredMode === "dark") {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.add("light-mode");
+    }
 
-updateMode(); // Inicializa el estado del botón al cargar la página
+    updateMode(); // Inicializa el estado del botón al cargar la página
 </script>
+
+<script>function toggleSlide() {
+    const panel = document.getElementById('sliding-panel');
+    const content = document.getElementById('about-content');
+
+    panel.classList.toggle('hide'); // Oculta o muestra el sliding-panel
+    content.classList.toggle('show'); // Mueve el about-content dentro de la vista
+}
+
+function toggleSlideBack() {
+    const panel = document.getElementById('sliding-panel');
+    const content = document.getElementById('about-content');
+
+    panel.classList.toggle('hide'); // Restaura el panel a su posición original
+    content.classList.toggle('show'); // Oculta el about-content
+}
+
+
+</script>
+
 </body>
+
 </html>
