@@ -386,3 +386,93 @@ body.dark-mode .about-section {
   margin-right: right;
 }
 
+
+.project {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  max-width:200px; /* Limita el ancho máximo */
+  width: 95%; /* Se adapta al ancho de la columna en el grid */
+  margin: 30px;
+}
+
+/* Efecto hover */
+.project:hover {
+  transform: translateY(-10px);
+}
+
+/* Encabezado de proyecto */
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Descripción del proyecto */
+.project p {
+  font-size: 1rem;
+  color: #7316fe;
+  margin-bottom: 15px;
+}
+
+/* Botón de enlace */
+.project a {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+  background-color: #0056b3;
+}
+
+/* Modo claro */
+body.light-mode .project {
+  background-color: #ffffff;
+  color: #333;
+  border-color: #ddd;
+}
+
+body.light-mode .project h3 {
+  color: #333;
+}
+
+body.light-mode .project a {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Modo oscuro */
+body.dark-mode .project {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #555;
+}
+
+body.dark-mode .project h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .project a {
+  background-color: #ff9800;
+  color: #ffffff;
+}
+
+body.dark-mode .project a:hover {
+  background-color: #e67e22;
+}
+.projects-section {
+  display: inline-block;
+  padding: 20px;
+  gap: 20px;
+
+}
