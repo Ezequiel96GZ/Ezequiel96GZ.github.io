@@ -389,16 +389,16 @@ body.dark-mode .about-section {
 
 .project {
   display: inline-block;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  max-width:200px; /* Limita el ancho máximo */
+  transition: transform 0.3s ease;
+  max-width: 200px; /* Limita el ancho máximo */
   width: 95%; /* Se adapta al ancho de la columna en el grid */
-  margin: 30px;
+  margin: 15px;
+  position: relative; /* Para el posicionamiento de los hijos */
+  overflow: hidden; /* Evita que el contenido se desborde */
 }
 
 /* Efecto hover */
@@ -406,73 +406,171 @@ body.dark-mode .about-section {
   transform: translateY(-10px);
 }
 
-/* Encabezado de proyecto */
-.project h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
-}
 
-/* Descripción del proyecto */
-.project p {
-  font-size: 1rem;
-  color: #7316fe;
-  margin-bottom: 15px;
-}
-
-/* Botón de enlace */
-.project a {
-  background-color: #007bff;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.project a:hover {
-  background-color: #0056b3;
-}
 
 /* Modo claro */
-body.light-mode .project {
-  background-color: #ffffff;
-  color: #333;
-  border-color: #ddd;
-}
 
-body.light-mode .project h3 {
-  color: #333;
-}
 
 body.light-mode .project a {
-  background-color: #007bff;
+  background-color: #000000;
   color: #ffffff;
 }
 
 /* Modo oscuro */
-body.dark-mode .project {
-  background-color: #333;
-  color: #ffffff;
-  border-color: #555;
-}
 
-body.dark-mode .project h3 {
-  color: #ffffff;
-}
 
 body.dark-mode .project a {
-  background-color: #ff9800;
+  background-color: #000000;
   color: #ffffff;
 }
 
 body.dark-mode .project a:hover {
   background-color: #e67e22;
 }
+
+body.light-mode .project a:hover {
+  background-color: #0079f9;
+}
+
+/* Ajustes de la sección de proyectos */
 .projects-section {
   display: inline-block;
   padding: 20px;
   gap: 20px;
+}
 
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Imagen de fondo del proyecto */
+.project-image {
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción de aspecto */
+  border-radius: 10px;
+  position: absolute; /* Para que se superponga al contenido */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Detrás del contenido */
+}
+
+
+/* Imagen estática */
+.project-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Texto en la tarjeta */
+.project h3,
+.project p,
+.project a {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté encima de la imagen */
+  color: #333;
+
+}
+
+/* GIF en segundo plano */
+.project-video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none; /* Oculto por defecto */
+}
+
+/* Efecto al pasar el cursor */
+.project:hover .project-image {
+  opacity: 0; /* Oculta la imagen estática */
+}
+
+.project:hover .project-video {
+  display: block; /* Muestra el GIF */
+}
+
+/* Encabezado de proyecto */
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  z-index: 3; /* Asegura que esté sobre la imagen y el gif */
+  background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Descripción del proyecto (se esconde en hover) */
+.project p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  text-shadow: 3px 3px 5px rgb(13, 13, 13); /* Sombra suave */
+}
+
+.project:hover p {
+  opacity: 0; /* Se oculta en hover */
+}
+
+/* Ícono de GitHub en lugar de botón */
+.project a {
+  background-color: transparent;
+  padding: 0;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.project a:hover {
+  color: #000000;
+}
+
+/* Imagen estática */
+.project-image {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Video de fondo que se reproduce en hover */
+.project:hover .project-image {
+  opacity: 0; /* Oculta la imagen estática */
+}
+
+.project:hover .project-video {
+  display: block; /* Muestra el GIF */
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: flex-start;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  margin: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project a {
+  margin-top: auto; /* Empuja el botón al final */
 }
