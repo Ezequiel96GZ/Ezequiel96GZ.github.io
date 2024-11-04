@@ -1,3 +1,4 @@
+
 /* Header principal */ 
 .main-header {
   position: relative;
@@ -19,7 +20,8 @@
 
 .overlay h1, .overlay p {
   color: #ffffff !important;
-  text-shadow: 3px 3px 5px rgba(210, 72, 72, 0.8), -3px -3px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 3px 3px 5px rgba(237, 222, 53, 0.749), -3px -3px 5px rgb(0, 0, 0);
+
 }
 
 .overlay h1 {
@@ -75,7 +77,24 @@ nav {
 /* Estilos generales */
 body {
   transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+
 }
+
+
+body {
+  font-family: 'Arimo', sans-serif;
+}
+
+h1,h2,h3 {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700; /* Negrita */
+}
+
+p {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400; /* Normal */
+}
+
 
 /* Modo Claro */
 body.light-mode {
@@ -519,7 +538,7 @@ body.light-mode .project a:hover {
   position: relative;
   z-index: 2;
   transition: opacity 0.3s ease;
-  text-shadow: 3px 3px 5px rgb(13, 13, 13); /* Sombra suave */
+  text-shadow: 3px 3px 5px rgba(7, 7, 7, 0.749), -3px -3px 5px rgb(0, 0, 0);
 }
 
 .project:hover p {
