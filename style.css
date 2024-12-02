@@ -1,13 +1,47 @@
+.gradient {
+  position: fixed; /* Fijo para cubrir toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(334deg, #2e2e2e, #3b0a45, #1b1d9a, #000000);
 
-/* Header principal */ 
-.main-header {
-  position: relative;
-  height: 350px;
-  padding: 5px 0;
-  background-color: #000000;
+
+  background-size: 180% 180%; /* Expande el fondo para el movimiento */
+  animation: gradient-animation 5s ease infinite; /* Aplica la animación */
+  z-index: -1; /* Asegura que quede detrás del contenido */
 }
 
-/* Superposición del texto sobre el carrusel */
+
+body.light-mode .gradient {
+  position: fixed; /* Fijo para cubrir toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(334deg, #1381db, #0b2495d3, #8e0531dd, #d30d0d);
+
+  background-size: 180% 180%; /* Expande el fondo para el movimiento */
+  animation: gradient-animation 5s ease infinite; /* Aplica la animación */
+  z-index: -1; /* Asegura que quede detrás del contenido */
+}
+
+
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
+
 .overlay {
   position: absolute;
   top: 50%;
@@ -96,11 +130,6 @@ p {
 }
 
 
-/* Modo Claro */
-body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
 
 body.light-mode nav {
   background-color: #f8f9fa; /* Fondo claro para el navbar */
@@ -116,11 +145,6 @@ body.light-mode nav a:hover {
 }
 
 /* Modo Oscuro */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
 body.dark-mode nav {
   background-color: #333333; /* Fondo oscuro para el navbar */
   color: #ffffff;
@@ -592,4 +616,120 @@ body.light-mode .project a:hover {
 
 .project a {
   margin-top: auto; /* Empuja el botón al final */
+}
+
+/* Estilo general para los botones de contacto */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.btn-contact {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 200px;
+  justify-content: center;
+}
+
+/* Colores específicos para cada botón */
+.whatsapp {
+  background-color: #25D366; /* Verde de WhatsApp */
+  color: white;
+}
+
+.email1 {
+  background-color: #d44638; /* Rojo de Email */
+  color: white;
+}
+
+.linkedin1 {
+  background-color: #0077b5; /* Azul de LinkedIn */
+  color: white;
+}
+
+/* Efecto hover */
+.btn-contact:hover {
+  opacity: 0.8;
+}
+
+/* Estilo para el icono */
+.btn-contact i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  .contact-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+  .btn-contact {
+      width: 100%;
+  }
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: linear-gradient(45deg, #0078d7, #00bfa6); /* Degradado del botón */
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download:hover {
+  background: linear-gradient(45deg, #005f9e, #008a78);
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+.btn-download i {
+  margin-right: 10px;
+}
+
+
+
+.btn-youtube {
+  display: inline-flex; /* Para alinear el icono con el texto */
+  align-items: center; /* Centra verticalmente el contenido */
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #ff0000, #c20000); /* Degradado en rojo */
+  border-radius: 50px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-youtube i {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  font-size: 1.5rem;
+}
+
+.btn-youtube:hover {
+  background: linear-gradient(90deg, #cc0000, #a30000); /* Cambia el degradado en hover */
+  transform: translateY(-4px); /* Efecto de elevación */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-youtube:active {
+  transform: translateY(0); /* Vuelve al estado original al presionar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }

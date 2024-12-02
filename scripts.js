@@ -59,3 +59,5 @@ function stopGif(element) {
     const gif = element.querySelector(".project-video");
     gif.style.display = "none";
 }
+
+
