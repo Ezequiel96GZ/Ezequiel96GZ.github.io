@@ -61,3 +61,5 @@ function stopGif(element) {
 }
 
 
+const slider = document.querySelector('.slider');
+slider.innerHTML += slider.innerHTML; // Duplica el contenido del slider

@@ -76,6 +76,7 @@ body.light-mode .gradient {
 /* Iconos de navegación - Efecto hover */
 .nav-link i {
   font-size: 1.5rem;
+  margin: 0%;
   transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -101,18 +102,16 @@ body.light-mode .gradient {
 
 /* Navbar */
 nav {
-  display: block;
-  width: 100%;
-  background-color: #f8f9fa;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
+  min-height: 70px; /* Altura fija para evitar saltos */
+  padding: 10px 0; /* Espaciado interno */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease; /* Para suavizar cambios */
 }
 
 /* Estilos generales */
-body {
-  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
 
-}
 
 
 body {
@@ -146,7 +145,7 @@ body.light-mode nav a:hover {
 
 /* Modo Oscuro */
 body.dark-mode nav {
-  background-color: #333333; /* Fondo oscuro para el navbar */
+  background-color: #1e1e1e; /* Fondo oscuro para el navbar */
   color: #ffffff;
 }
 
@@ -704,32 +703,120 @@ body.light-mode .project a:hover {
 
 
 .btn-youtube {
-  display: inline-flex; /* Para alinear el icono con el texto */
-  align-items: center; /* Centra verticalmente el contenido */
-  font-family: 'Arial', sans-serif;
+  display: inline-flex; /* Para alinear el icono y el texto */
+  align-items: center; /* Centra el contenido verticalmente */
+  padding: 10px 20px;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 15px 30px;
-  color: #ffffff;
-  text-decoration: none;
-  background: linear-gradient(90deg, #ff0000, #c20000); /* Degradado en rojo */
-  border-radius: 50px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  color: white;
+  background: linear-gradient(90deg, #ff0000, #cc0000); /* Gradiente en tonos de rojo */
+  border: none;
+  border-radius: 8px;
+  text-decoration: none; /* Quita el subrayado */
+  transition: transform 0.3s ease, background 0.3s ease; /* Animaciones suaves */
 }
 
 .btn-youtube i {
   margin-right: 10px; /* Espacio entre el icono y el texto */
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Tamaño del icono */
 }
 
 .btn-youtube:hover {
-  background: linear-gradient(90deg, #cc0000, #a30000); /* Cambia el degradado en hover */
-  transform: translateY(-4px); /* Efecto de elevación */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #d40000, #a80000); /* Cambia el gradiente al pasar el cursor */
+  transform: translateY(-2px); /* Efecto de elevación */
 }
 
-.btn-youtube:active {
-  transform: translateY(0); /* Vuelve al estado original al presionar */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+/* Estilo general para los botones */
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* WhatsApp */
+.btn-contact.whatsapp {
+  background: linear-gradient(90deg, #25D366, #128C7E); /* Tonos verdes */
+}
+
+.btn-contact.whatsapp:hover {
+  background: linear-gradient(90deg, #1EBF5C, #0A785A); /* Hover */
+  transform: translateY(-2px);
+}
+
+/* Email */
+.btn-contact.email1 {
+  background: linear-gradient(90deg, #FF5733, #C70039); /* Tonos rojizos */
+}
+
+.btn-contact.email1:hover {
+  background: linear-gradient(90deg, #FF2E10, #A00030); /* Hover */
+  transform: translateY(-2px);
+}
+
+/* LinkedIn */
+.btn-contact.linkedin1 {
+  background: linear-gradient(90deg, #0077b5, #005A87); /* Tonos azules */
+}
+
+.btn-contact.linkedin1:hover {
+  background: linear-gradient(90deg, #005F9E, #003D6B); /* Hover */
+  transform: translateY(-2px);
+}
+
+/* Iconos */
+.btn-contact i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+
+/* Contenedor del banner */
+.banner {
+  position: relative;
+  overflow: hidden;
+  background-color: #1e1e1e; /* Fondo oscuro */
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+/* Contenedor de los iconos */
+.slider {
+  display: inline-flex;
+  animation: scroll  35s linear infinite; /* Animación infinita */
+}
+
+/* Estilo de los iconos */
+.slider i {
+  font-size: 3rem; /* Tamaño de los iconos */
+  color: #ffffff; /* Color blanco */
+  margin: 0 80px; /* Espaciado entre los iconos */
+  
+}
+
+
+
+/* Animación de desplazamiento */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+body.light-mode .banner {
+  background-color: #f8f9fa;
+}
+
+body.light-mode .slider i {
+  color: #1e1e1e;
 }
