@@ -63,3 +63,43 @@ function stopGif(element) {
 
 const slider = document.querySelector('.slider');
 slider.innerHTML += slider.innerHTML; // Duplica el contenido del slider
+
+
+
+// Cambiar entre íconos de "+" y "-"
+document.getElementById("floating-main-btn").addEventListener("click", function () {
+    const options = document.querySelector(".floating-options");
+    const cv = document.querySelector(".floating-cv");
+    const icon = document.getElementById("floating-icon");
+  
+    options.classList.toggle("show");
+    cv.classList.toggle("show");
+  
+    // Cambiar icono
+    if (icon.classList.contains("fa-plus")) {
+      icon.classList.remove("fa-plus");
+      icon.classList.add("fa-minus");
+    } else {
+      icon.classList.remove("fa-minus");
+      icon.classList.add("fa-plus");
+    }
+  });
+  
+  // Funciones de acción
+  function openWhatsApp() {
+    window.open("https://wa.me/1234567890", "_blank"); // Reemplaza con tu número
+  }
+  
+  function openLinkedIn() {
+    window.open("https://www.linkedin.com/in/tu-perfil", "_blank");
+  }
+  
+  function openGitHub() {
+    window.open("https://github.com/tu-perfil", "_blank");
+  }
+  
+  function downloadCV() {
+    window.open("ruta-al-archivo-CV.pdf", "_blank");
+  }
+  
+// Variable para el botón principal y el menú flotante

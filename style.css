@@ -4,7 +4,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(334deg, #2e2e2e, #3b0a45, #1b1d9a, #000000);
+  background: linear-gradient(45deg, #2e2e2e, #790031, #1b1d9a, #000000, #7802aa, #a8a8a8);
+
 
 
   background-size: 180% 180%; /* Expande el fondo para el movimiento */
@@ -19,8 +20,7 @@ body.light-mode .gradient {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(334deg, #1381db, #0b2495d3, #8e0531dd, #d30d0d);
-
+  background: linear-gradient(45deg, #ccff00, #66ff99, #00bfa6, #008080, #001f3d);
   background-size: 180% 180%; /* Expande el fondo para el movimiento */
   animation: gradient-animation 5s ease infinite; /* Aplica la animación */
   z-index: -1; /* Asegura que quede detrás del contenido */
@@ -790,7 +790,7 @@ body.light-mode .project a:hover {
 /* Contenedor de los iconos */
 .slider {
   display: inline-flex;
-  animation: scroll  35s linear infinite; /* Animación infinita */
+  animation: scroll  55s linear infinite; /* Animación infinita */
 }
 
 /* Estilo de los iconos */
@@ -819,4 +819,131 @@ body.light-mode .banner {
 
 body.light-mode .slider i {
   color: #1e1e1e;
+}
+
+.floating-menu {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Botón principal (más) */
+.floating-btn {
+  background: linear-gradient(45deg, #0078d7, #00bfa6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Opciones del menú (inicialmente ocultas) */
+.floating-options {
+  display: none;
+  position: absolute;
+  bottom: 70px; /* Espaciado entre el botón principal y las opciones */
+  right: 0;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px); /* Empuja el menú hacia abajo */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mostrar las opciones cuando el menú está activado */
+.floating-options.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0); /* Mueve el menú hacia su posición final */
+}
+
+/* Botones individuales */
+.floating-option {
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-option i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Colores específicos para cada botón */
+.floating-option.whatsapp {
+  background-color: #25D366; /* Verde de WhatsApp */
+}
+
+.floating-option.linkedin {
+  background-color: #0077b5; /* Azul de LinkedIn */
+}
+
+.floating-option.github {
+  background-color: #333; /* Gris oscuro de GitHub */
+}
+
+/* Efecto hover para las opciones */
+.floating-option:hover {
+  transform: scale(1.1);
+}
+
+/* Botón de CV (inicialmente oculto) */
+.floating-cv {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 70px; /* Ubicado a la izquierda del botón principal */
+}
+
+.floating-cv.show {
+  display: flex;
+}
+
+/* Estilo del botón de CV */
+.cv-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(45deg, #ccff00, #00bfa6);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cv-btn i {
+  margin-right: 10px;
+}
+
+.cv-btn:hover {
+  background: linear-gradient(45deg, #ccff00, #00bfa6);
+  transform: scale(1.1);
+}
+
+body.select {
+  background-color: rgba(51, 51, 51, 0.7); /* Fondo gris oscuro con 70% de opacidad */
+  color: #ffffff;
+  border: 1px solid #555;
 }
