@@ -22,15 +22,16 @@ toggleButton.addEventListener("click", () => {
     updateMode(); // Actualiza el botón
 });
 
-// Verificar la preferencia guardada en localStorage
+// Verificar la preferencia guardada en localStorage o iniciar en modo oscuro
 const preferredMode = localStorage.getItem("mode");
-if (preferredMode === "dark") {
-    body.classList.add("dark-mode");
-} else {
+if (preferredMode === "light") {
     body.classList.add("light-mode");
+} else {
+    body.classList.add("dark-mode");
 }
 
-updateMode(); // Inicializa el estado del botón al cargar la página
+// Inicializar el estado del botón
+updateMode();
 
 // Funciones para el panel deslizante
 function toggleSlide() {
@@ -60,46 +61,43 @@ function stopGif(element) {
     gif.style.display = "none";
 }
 
-
 const slider = document.querySelector('.slider');
 slider.innerHTML += slider.innerHTML; // Duplica el contenido del slider
-
-
 
 // Cambiar entre íconos de "+" y "-"
 document.getElementById("floating-main-btn").addEventListener("click", function () {
     const options = document.querySelector(".floating-options");
     const cv = document.querySelector(".floating-cv");
     const icon = document.getElementById("floating-icon");
-  
+
     options.classList.toggle("show");
     cv.classList.toggle("show");
-  
+
     // Cambiar icono
     if (icon.classList.contains("fa-plus")) {
-      icon.classList.remove("fa-plus");
-      icon.classList.add("fa-minus");
+        icon.classList.remove("fa-plus");
+        icon.classList.add("fa-minus");
     } else {
-      icon.classList.remove("fa-minus");
-      icon.classList.add("fa-plus");
+        icon.classList.remove("fa-minus");
+        icon.classList.add("fa-plus");
     }
-  });
-  
-  // Funciones de acción
-  function openWhatsApp() {
-    window.open("https://wa.me/1234567890", "_blank"); // Reemplaza con tu número
-  }
-  
-  function openLinkedIn() {
-    window.open("https://www.linkedin.com/in/tu-perfil", "_blank");
-  }
-  
-  function openGitHub() {
-    window.open("https://github.com/tu-perfil", "_blank");
-  }
-  
-  function downloadCV() {
-    window.open("ruta-al-archivo-CV.pdf", "_blank");
-  }
-  
+});
+
+// Funciones de acción
+function openWhatsApp() {
+    window.open("https://wa.me/5491158422609", "_blank"); // Reemplaza con tu número
+}
+
+function openLinkedIn() {
+    window.open("https://www.linkedin.com/in/ezequielgz/", "_blank");
+}
+
+function openGitHub() {
+    window.open("https://github.com/Ezequiel96GZ", "_blank");
+}
+
+function downloadCV() {
+    window.open("https://drive.google.com/file/d/1aVK1nbHqHfXtSbiRTrdqlw_IY3_xqYOn/view?usp=sharing", "_blank");
+}
+
 // Variable para el botón principal y el menú flotante
