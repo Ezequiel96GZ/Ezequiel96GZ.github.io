@@ -101,3 +101,31 @@ function downloadCV() {
 }
 
 // Variable para el botón principal y el menú flotante
+
+document.addEventListener('scroll', () => {
+    const progressBar = document.querySelector('.progress-bar');
+    const scrollTop = window.scrollY; // Distancia recorrida hacia abajo
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight; // Altura total del documento
+    const scrollPercentage = (scrollTop / scrollHeight) * 100; // Porcentaje del scroll
+
+    progressBar.style.width = `${scrollPercentage}%`; // Ajusta el ancho de la barra
+});
+
+// Mostrar/ocultar el botón según el scroll
+const backToTopButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
+
+// Volver al inicio al hacer clic
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

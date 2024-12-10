@@ -42,6 +42,8 @@ body.light-mode .gradient {
 
 
 
+
+
 .overlay {
   position: absolute;
   top: 50%;
@@ -50,7 +52,11 @@ body.light-mode .gradient {
   color: white;
   text-align: center;
   z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 2px;
+  border-radius: 8px;
 }
+
 
 .overlay h1, .overlay p {
   color: #ffffff !important;
@@ -110,6 +116,8 @@ nav {
   transition: all 0.3s ease; /* Para suavizar cambios */
 }
 
+
+
 /* Estilos generales */
 
 
@@ -131,7 +139,7 @@ p {
 
 
 body.light-mode nav {
-  background-color: #f8f9fa; /* Fondo claro para el navbar */
+  background-color: #f8f9fa83; /* Fondo claro para el navbar */
   color: #000000;
 }
 
@@ -145,7 +153,7 @@ body.light-mode nav a:hover {
 
 /* Modo Oscuro */
 body.dark-mode nav {
-  background-color: #1e1e1e; /* Fondo oscuro para el navbar */
+  background-color: #1e1e1e97; /* Fondo oscuro para el navbar */
   color: #ffffff;
 }
 
@@ -237,9 +245,15 @@ body.dark-mode option {
 }
 
 body.dark-mode .section-bg {
-  background-color: #1e1e1e;
+  background-color:#1e1e1e97;
   color: #ffffff;
 }
+
+body.light-mode .section-bg {
+  background-color: #f8f9fa83;
+  color: #000000;
+}
+
 
 /* Lista de proyectos y contacto */
 .list-group {
@@ -262,8 +276,12 @@ body.dark-mode .list-group-item a:hover {
 
 
 body.dark-mode .about-section {
-  background-color: #1e1e1e;
+  background-color: #1e1e1ebf;
   color: #ffffff;
+}
+body.light-mode .about-section {
+  background-color: #f8f9fa83;
+  color: #000000;
 }
 
 /* Sección "Quién Soy" */
@@ -275,6 +293,10 @@ body.dark-mode .about-section {
   position: relative;
   width: 100%;
   overflow: hidden; /* Evita desbordamientos */
+
+ 
+  border-radius: 8px;
+  
 }
 
 /* Panel deslizante: configurado para desvanecerse */
@@ -336,8 +358,8 @@ body.dark-mode .about-section {
 
 /* Estilo para la imagen */
 .sliding-panel .profile-img {
-  width: 250px; /* Ajusta el ancho de la imagen */
-  height: 250px; /* Ajusta la altura de la imagen */
+  width: 325px; /* Ajusta el ancho de la imagen */
+  height: 325px; /* Ajusta la altura de la imagen */
   border-radius: 50%; /* Hace que la imagen sea redonda */
   margin: 15px 0; /* Espacio alrededor de la imagen */
   object-fit: cover;
@@ -616,6 +638,7 @@ body.light-mode .project a:hover {
 .project a {
   margin-top: auto; /* Empuja el botón al final */
 }
+/* Cambiar el color a blanco al hacer clic */
 
 /* Estilo general para los botones de contacto */
 .contact-buttons {
@@ -659,7 +682,7 @@ body.light-mode .project a:hover {
 
 /* Efecto hover */
 .btn-contact:hover {
-  opacity: 0.8;
+  color: white;
 }
 
 /* Estilo para el icono */
@@ -694,6 +717,7 @@ body.light-mode .project a:hover {
 .btn-download:hover {
   background: linear-gradient(45deg, #005f9e, #008a78);
   transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+  color: white;
 }
 
 .btn-download i {
@@ -724,6 +748,7 @@ body.light-mode .project a:hover {
 .btn-youtube:hover {
   background: linear-gradient(90deg, #d40000, #a80000); /* Cambia el gradiente al pasar el cursor */
   transform: translateY(-2px); /* Efecto de elevación */
+  color: white;
 }
 
 /* Estilo general para los botones */
@@ -782,7 +807,7 @@ body.light-mode .project a:hover {
 .banner {
   position: relative;
   overflow: hidden;
-  background-color: #1e1e1e; /* Fondo oscuro */
+  background-color: #1e1e1e97; /* Fondo oscuro */
   padding: 10px 0;
   white-space: nowrap;
 }
@@ -814,7 +839,7 @@ body.light-mode .project a:hover {
 }
 
 body.light-mode .banner {
-  background-color: #f8f9fa;
+  background-color:  #f8f9fa83;
 }
 
 body.light-mode .slider i {
@@ -828,49 +853,10 @@ body.light-mode .slider i {
   z-index: 1000;
 }
 
-/* Botón principal (más) */
+/* Botón principal */
 .floating-btn {
-  background: linear-gradient(45deg, #0078d7, #00bfa6);
+  background: linear-gradient(45deg, #6b11cbc0, #2574fcb7);
   color: white;
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.floating-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
-}
-
-/* Opciones del menú (inicialmente ocultas) */
-.floating-options {
-  display: none;
-  position: absolute;
-  bottom: 70px; /* Espaciado entre el botón principal y las opciones */
-  right: 0;
-  flex-direction: column;
-  gap: 10px;
-  opacity: 0;
-  transform: translateY(20px); /* Empuja el menú hacia abajo */
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Mostrar las opciones cuando el menú está activado */
-.floating-options.show {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0); /* Mueve el menú hacia su posición final */
-}
-
-/* Botones individuales */
-.floating-option {
   border: none;
   border-radius: 50%;
   width: 55px;
@@ -878,9 +864,53 @@ body.light-mode .slider i {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Opciones del menú */
+.floating-options {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none; /* Evita interacciones cuando está oculto */
+}
+
+.floating-options.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Habilita interacciones cuando está visible */
+}
+
+/* Botones individuales */
+.floating-option {
+  border: none;
+  border-radius: 50%;
+  width: 53px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-option:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .floating-option i {
@@ -888,58 +918,58 @@ body.light-mode .slider i {
   color: white;
 }
 
-/* Colores específicos para cada botón */
+/* Colores personalizados */
 .floating-option.whatsapp {
-  background-color: #25D366; /* Verde de WhatsApp */
+  background: linear-gradient(45deg, #25D366, #1ebe57);
 }
 
 .floating-option.linkedin {
-  background-color: #0077b5; /* Azul de LinkedIn */
+  background: linear-gradient(45deg, #0077b5, #005f9e);
 }
 
 .floating-option.github {
-  background-color: #333; /* Gris oscuro de GitHub */
+  background: linear-gradient(45deg, #333, #444);
 }
 
-/* Efecto hover para las opciones */
-.floating-option:hover {
-  transform: scale(1.1);
-}
-
-/* Botón de CV (inicialmente oculto) */
+/* Botón de CV */
 .floating-cv {
   display: none;
   position: absolute;
   bottom: 0;
-  right: 70px; /* Ubicado a la izquierda del botón principal */
+  right: 80px; /* Ajusta la posición */
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .floating-cv.show {
   display: flex;
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* Estilo del botón de CV */
 .cv-btn {
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  justify-content: center;
+  padding: 10px 20px;
   font-size: 1rem;
   color: white;
-  background: linear-gradient(45deg, #ccff00, #00bfa6);
+  background: linear-gradient(45deg, #ff6a00, #ff8c00);
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cv-btn i {
   margin-right: 10px;
-}
-
-.cv-btn:hover {
-  background: linear-gradient(45deg, #ccff00, #00bfa6);
-  transform: scale(1.1);
 }
 
 body.select {
@@ -947,3 +977,68 @@ body.select {
   color: #ffffff;
   border: 1px solid #555;
 }
+
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  left: 0;
+  height: 6px; /* Altura de la barra */
+  width: 0; /* Ancho inicial */
+  background: linear-gradient(5deg, #ff0044b9, #ff00ccad, #8000ffa8, #ff0080b6);
+
+  background-size: 200% 200%; /* Permite un efecto dinámico si lo deseas */
+  animation: gradient-animation 4s infinite linear; /* Opción para animar el degradado */
+  transition: width 0.2s ease;
+}
+
+body.light-mode .progress-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  left: 0;
+  height: 6px; /* Altura de la barra */
+  width: 0; /* Ancho inicial */
+  background: linear-gradient(5deg, #00e677b1, #00c853af, #1b5e1fb5, #74ff03b5);
+  background-size: 200% 200%; /* Permite un efecto dinámico si lo deseas */
+  animation: gradient-animation 4s infinite linear; /* Opción para animar el degradado */
+  transition: width 0.2s ease;
+}
+
+/* Estilo para el botón */
+#back-to-top {
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: linear-gradient(45deg, rgba(23, 23, 21, 0.534), rgba(49, 48, 41, 0.616));
+  color: rgba(255, 255, 255, 0.854);
+  border: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+
+/* Clase para mostrar el botón */
+#back-to-top.show {
+  opacity: 1;
+  transform: scale(1);
+}
+#back-to-top i {
+  font-size: 2rem; /* Aumenta el tamaño de la flecha */
+  transition: transform 0.3s ease; /* Suaviza el cambio al pasar el cursor */
+}
+
+#back-to-top:hover i {
+  transform: scale(1.2); /* Agranda la flecha ligeramente al pasar el cursor */
+}
+
