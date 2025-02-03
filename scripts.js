@@ -7,10 +7,10 @@ const toggleButton = document.getElementById("mode-toggle");
 // Función para alternar modos
 function updateMode() {
     if (body.classList.contains("dark-mode")) {
-        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Cambiar a Modo Claro';
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
         localStorage.setItem("mode", "dark"); // Guardar preferencia en localStorage
     } else {
-        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Cambiar a Modo Oscuro';
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i>  Modo Oscuro';
         localStorage.setItem("mode", "light"); // Guardar preferencia en localStorage
     }
 }
@@ -129,3 +129,50 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggle-mode-btn");
+    const body = document.body;
+    const aboutSection = document.querySelector(".about-section"); // Ajusta la clase al identificador de tu sección "Sobre mí"
+
+    // Alternar entre blanco y negro
+    toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        body.classList.toggle("light-mode");
+        updateMode(); // Actualiza el estado del botón
+    });
+
+    // Función para actualizar el estado del modo
+    function updateMode() {
+        if (body.classList.contains("dark-mode")) {
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+            localStorage.setItem("mode", "dark"); // Guardar preferencia en localStorage
+        } else {
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i> ';
+            localStorage.setItem("mode", "light"); // Guardar preferencia en localStorage
+        }
+    }
+
+    // Verificar la preferencia guardada en localStorage al cargar la página
+    const preferredMode = localStorage.getItem("mode");
+    if (preferredMode === "dark") {
+        body.classList.add("dark-mode");
+        updateMode(); // Inicializa el estado del botón
+    } else {
+        body.classList.add("light-mode");
+        updateMode(); // Inicializa el estado del botón
+    }
+
+    // Mostrar el botón después de pasar la sección "Sobre mí"
+    window.addEventListener("scroll", () => {
+        const sectionTop = aboutSection.getBoundingClientRect().top;
+        const sectionHeight = aboutSection.offsetHeight;
+
+        if (sectionTop + sectionHeight <= window.innerHeight) {
+            toggleButton.classList.add("show");
+        } else {
+            toggleButton.classList.remove("show");
+        }
+    });
+});
+

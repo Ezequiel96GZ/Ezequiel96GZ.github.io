@@ -1012,7 +1012,7 @@ body.light-mode .progress-bar {
 #back-to-top {
   z-index: 1000;
   position: fixed;
-  bottom: 20px;
+  bottom: 90px;
   left: 20px;
   background: linear-gradient(45deg, rgba(23, 23, 21, 0.534), rgba(49, 48, 41, 0.616));
   color: rgba(255, 255, 255, 0.854);
@@ -1040,5 +1040,35 @@ body.light-mode .progress-bar {
 
 #back-to-top:hover i {
   transform: scale(1.2); /* Agranda la flecha ligeramente al pasar el cursor */
+}
+
+.floating-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: linear-gradient(45deg, rgba(23, 23, 21, 0.534), rgba(49, 48, 41, 0.616));
+  color: #fbfbfb;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.floating-mode-toggle.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.floating-mode-toggle i {
+  font-size: 1.4rem;
 }
 

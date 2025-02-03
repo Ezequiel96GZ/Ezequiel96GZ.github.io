@@ -19,321 +19,339 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
     <div class="gradient"> </div>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <!-- Botón para cambiar el modo oscuro/claro a la izquierda -->
-        <button id="mode-toggle" class="btn btn-secondary mr-auto">
-            <i class="fas fa-moon"></i> Modo Oscuro
-        </button>
-
-        <!-- Botón hamburguesa para colapsar el menú (ubicado a la derecha) -->
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menú de navegación -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link projects" href="#projects"><i class="fas fa-project-diagram"></i> Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link youtube" href="#canalYT"><i
-                            class="fab fa-youtube"></i> Mi canal</a>
-                </li>
-             
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link email" href="#contact"><i class="fas fa-envelope"></i>
-                        Contacto</a>
-                </li>
-                
-            </ul>
-        </div>
-    </div>
-    <div class="progress-bar"></div>
-</nav>
-<!-- Contenido Principal -->
-<header class="main-header">
-    <div id="carouselExample" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="5000">
-                <img src="imagen2.gif" class="d-block w-100" alt="Imagen 1">
-            </div>
-            <div class="carousel-item" data-interval="5000">
-                <img src="portada1.png" class="d-block w-100" alt="Imagen 2">
-            </div>
-            <div class="carousel-item" data-interval="5000">
-                <img src="portada3.png" class="d-block w-100" alt="Imagen 3">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
-        <div class="overlay">
-            <h1>Hola soy Ezequiel González</h1>
-            <p>Transformo ideas en código y creo soluciones innovadoras en tecnología web y software</p>
-        </div>
-    </div>
-</header>
-
-<div class="banner">
-    <div class="slider">
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-js"></i>
-      <i class="fab fa-java"></i>
-      <i class="fab fa-python"></i>
-      <i class="fas fa-database"></i>
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-js"></i>
-      <i class="fab fa-java"></i>
-      <i class="fab fa-python"></i>
-      <i class="fas fa-database"></i>
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-js"></i>
-      <i class="fab fa-java"></i>
-      <i class="fab fa-python"></i>
-      <i class="fas fa-database"></i>
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-js"></i>
-      <i class="fab fa-java"></i>
-      <i class="fab fa-python"></i>
-      <i class="fas fa-database"></i>
-     
-     
-    
-      
-      <!-- Repite o agrega más iconos según tus habilidades -->
-    </div>
-  </div>
-
-<main class="container my-5">
-
-    
-      
-
-    
-    <section id="about-me" class="about-section">
-        <div class="container">
-            
-            <button onclick="toggleSlideBack()" class="btn-arrow-left">
-                <i class="fas fa-arrow-left"></i> <!-- Icono de flecha izquierda -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Botón para cambiar el modo oscuro/claro a la izquierda -->
+            <button id="mode-toggle" class="btn btn-secondary mr-auto">
+                <i class="fas fa-moon"></i> Modo Oscuro
             </button>
 
-            <!-- Contenedor que actúa como "puerta" -->
-            <div class="sliding-panel" id="sliding-panel">
-                <img src="yo.gif" alt="Ezequiel González" class="profile-img">
-                <h2>Sobre mi</h2>
-                <ul>
-                    <p>Alias: EZE GZ</p>
-                    <p>Edad : 28 Años</p>
-                    <p>Pais origen: Argentina  </p>
-                    <P>Lenguaje de Programacion: JAVA </P>
-                    <p>Libro favorito : 1984 - George orwell </p>
-                    <p>Pelicula Favorita : Terminator</p>
-                    <p>Hobbies: Video juegos - Guitarra - Boxeo - Leer</p>
+            <!-- Botón hamburguesa para colapsar el menú (ubicado a la derecha) -->
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link projects" href="#projects"><i class="fas fa-project-diagram"></i> Proyectos
+                            |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link youtube" href="#canalYT"><i class="fab fa-youtube"></i> Mi canal |</a>
+                    </li>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link email" href="#contact"><i class="fas fa-envelope"></i>
+                            Contacto |</a>
+                    </li>
 
                 </ul>
-
-                <h3 class="text-center">- CV - </h3>
-                <div class="text-center">
-                  <a href="https://drive.google.com/file/d/1aVK1nbHqHfXtSbiRTrdqlw_IY3_xqYOn/view?usp=sharing" class="btn-download" download="EzequielGonzalez_CV.pdf">
-                    <i class="fas fa-download"></i> Ver CV
-                  </a>
+            </div>
+        </div>
+        <div class="progress-bar"></div>
+    </nav>
+    <!-- Contenido Principal -->
+    <header class="main-header">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="5000">
+                    <img src="imagen2.gif" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="portada1.png" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="portada3.png" class="d-block w-100" alt="Imagen 3">
                 </div>
             </div>
-
-<!-- Botón para volver al inicio -->
-<button id="back-to-top" title="Volver al inicio"><i class="fas fa-chevron-up"></i>
-
-</button>
-
-
-            <!-- Contenido que se revelará cuando la "puerta" se mueva -->
-            <div class="about-content" id="about-content">
-                <h3>Sobre mí</h3>
-                <p>
-                    Soy <strong>Ezequiel González</strong>, un apasionado de la tecnología desde joven, cuando mi primera computadora, una <strong>Compaq All-in-One cds524</strong> con Windows 95, despertó mi curiosidad por entender el funcionamiento de los sistemas. Sin embargo, tomé un camino diferente y desarrollé una carrera en gastronomía, donde perfeccioné habilidades como barista y en la elaboración de pizzas.
-                </p>
-                
-                <p>
-                    Aunque disfruté de esa etapa, el deseo por explorar el mundo de la programación siempre estuvo presente. Finalmente, decidí cambiar de rumbo e inscribirme en la Diplomatura de Desarrollo Web, descubriendo mi vocación en este campo.
-                </p>
-                
-                <h4>Mi cambio hacia la tecnología</h4>
-                <p>
-                    Apliqué mis habilidades de resolución de problemas y atención al detalle en mi transición a la programación. Ahora, con conocimientos sólidos en Java, SQL y desarrollo web, me siento motivado para enfrentar nuevos desafíos y seguir creciendo en este apasionante mundo.
-                </p>
-                
-
-
-
-
-
-            </div>
-        </div>
-
-        <button onclick="toggleSlide()" class="btn-arrow-right">
-            <i class="fas fa-arrow-right"></i> <!-- Icono de flecha derecha -->
-        </button>
-    </section>
-
-    <div class="floating-menu">
-        <button id="floating-main-btn" class="floating-btn">
-          <i id="floating-icon" class="fas fa-plus"></i>
-        </button>
-        <div class="floating-options">
-          <button class="floating-option whatsapp" onclick="openWhatsApp()">
-            <i class="fab fa-whatsapp"></i>
-          </button>
-          <button class="floating-option linkedin" onclick="openLinkedIn()">
-            <i class="fab fa-linkedin"></i>
-          </button>
-          <button class="floating-option github" onclick="openGitHub()">
-            <i class="fab fa-github"></i>
-          </button>
-        </div>
-        <div class="floating-cv">
-          <button class="cv-btn" onclick="downloadCV()">
-            <i class="fas fa-file-download"></i> CV
-          </button>
-        </div>
-      </div>
-      
-      
-    <section id="projects" class="section-bg">
-        <h2 class="text-center">Explora mis proyectos</h2>
-        <div class="projects-container">
-
-                
-            <article class="project" onmouseover="playGif(this)" onmouseout="stopGif(this)">
-                <h3>Gestión de Clientes y Productos</h3>
-                <img src="proyecto1.jpg" class="project-image" alt="Gestión de Clientes y Productos">
-                <img src="proyecto1gif.gif" class="project-video" alt="Video en GIF" style="display: none;">
-                <p>Aplicación desarrollada en Java para gestionar inventarios, clientes y proveedores.</p>
-                <a href="https://github.com/Ezequiel96GZ/proyecto-gestion-clientes/tree/master" target="_blank">
-                    <i class="fab fa-github">GitHub</i> <!-- Ícono de GitHub -->
-                </a>
-            </article>
-
-            <article class="project" onmouseover="playGif(this)" onmouseout="stopGif(this)">
-                <h3>Roboguide - Fanuc</h3>
-                <img src="proyecto2.jpg" class="project-image" alt="Gestión de Clientes y Productos">
-                <img src="proyecto2gif.gif" class="project-video" alt="Video en GIF" style="display: none;">
-                <p>Aplicación desarrollada en Java para gestionar inventarios, clientes y proveedores.</p>
-                <a href="https://github.com/tu-repositorio" target="_blank">
-                    <i class="fab fa-github">GitHub</i> <!-- Ícono de GitHub -->
-                </a>
-            </article>
-            
-            <article class="project" onmouseover="playGif(this)" onmouseout="stopGif(this)">
-                <h3>Fantasmas</h3>
-                <img src="proyecto3.jpg" class="project-image" alt="Gestión de Clientes y Productos">
-                <img src="proyecto3gif.gif" class="project-video" alt="Video en GIF" style="display: none;">
-                <p>Aplicación desarrollada en Java para gestionar inventarios, clientes y proveedores.</p>
-                <a href="https://github.com/Ezequiel96GZ/projetGhost" target="_blank">
-                    <i class="fab fa-github">GitHub</i> <!-- Ícono de GitHub -->
-                </a>
-            </article>
-            
-            <article class="project" onmouseover="playGif(this)" onmouseout="stopGif(this)">
-                <h3>Calculadora</h3>
-                <img src="proyecto4.jpg" class="project-image" alt="Gestión de Clientes y Productos">
-                <img src="proyecto4gif.gif" class="project-video" alt="Video en GIF" style="display: none;">
-                <p>Aplicación desarrollada en Java para gestionar inventarios, clientes y proveedores.</p>
-                <a href="https://github.com/tu-repositorio" target="_blank">
-                    <i class="fab fa-github">GitHub</i> <!-- Ícono de GitHub -->
-                </a>
-            </article>
-            
-           
-        </div>
-
-    </section>
-    
-    <section id="canalYT" class="my-5 section-bg">
-        <h2 class="text-center">Canal de YouTube</h2>
-        <p class="text-center">¡Bienvenidos a mi canal de YouTube! En **/Eze_gz** comparto contenido relacionado con programación, tecnología, crecimiento personal, y toques de humor, como memes y shorts divertidos. Explora mis videos para aprender sobre el mundo de la programación mientras te diviertes. ¡Únete a la comunidad!</p>
-        <div class="text-center">
-            <a href="https://www.youtube.com/@eze_gz" target="_blank" class="btn-youtube">
-                <i class="fab fa-youtube"></i> Visita mi canal
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
             </a>
-        </div>
-        <div class="text-center mt-4">
-            <h4>Algunos de mis videos recientes:</h4>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="https://youtube.com/shorts/bEMxVaeoU8k?si=5IXOgUVOjQePE0Jd" target="_blank">
-                        <img src="https://img.youtube.com/vi/bEMxVaeoU8k/maxresdefault.jpg" alt="Miniatura de Short 1" width="100%" height="215">
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://youtube.com/shorts/7kZGjhDYGdw?si=jAj7aMqR0M0NKp0G" target="_blank">
-                        <img src="https://img.youtube.com/vi/7kZGjhDYGdw/maxresdefault.jpg" alt="Miniatura de Short 2" width="100%" height="215">
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://youtube.com/shorts/moLJ-VbSWnU?si=NBAId05DXRDaY7dg" target="_blank">
-                        <img src="https://img.youtube.com/vi/moLJ-VbSWnU/maxresdefault.jpg" alt="Miniatura de Short 3" width="100%" height="215">
-                    </a>
-                </div>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+            <div class="overlay">
+                <h1>Hola soy Ezequiel González</h1>
+                <p>Transformo codigo en ideas, en ideas soluciones y en soluciones en ideas inovadoras</p>
             </div>
         </div>
-    </section>
-    
+    </header>
 
-    <section id="contact" class="my-5 section-bg">
-        <h2 class="text-center">¡Conéctate conmigo!</h2>
-        <div class="contact-buttons">
-            <div class="contact-item">
-                <a href="https://wa.me/5491158422609" target="_blank" class="btn-contact whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
+    <div class="banner">
+        <div class="slider">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-java"></i>
+            <i class="fab fa-python"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-java"></i>
+            <i class="fab fa-python"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-java"></i>
+            <i class="fab fa-python"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-java"></i>
+            <i class="fab fa-python"></i>
+            <i class="fas fa-database"></i>
+
+
+
+
+            <!-- Repite o agrega más iconos según tus habilidades -->
+        </div>
+    </div>
+
+    <main class="container my-5">
+
+
+
+
+
+        <section id="about-me" class="about-section">
+            <div class="container">
+
+                <button onclick="toggleSlideBack()" class="btn-arrow-left">
+                    <i class="fas fa-arrow-left"></i> <!-- Icono de flecha izquierda -->
+                </button>
+
+                <!-- Contenedor que actúa como "puerta" -->
+                <div class="sliding-panel" id="sliding-panel">
+                    <img src="yo.gif" alt="Ezequiel González" class="profile-img">
+                    <h2>Ezequiel González</h2>
+                    <h5>Programador | Desarrollador  Web</h5>
+                    <p><strong>Ubicación:</strong> Argentina (Disponible para trabajo remoto)</p>
+                
+                    <!-- Sección de habilidades técnicas -->
+                    <div class="technical-skills">
+                        <h6><strong>Habilidades Técnicas:</strong></h6>
+                        <ul>
+                            <li><strong>Lenguaje de Programación:</strong> Java - Python</li>
+                            <li><strong>Lenguaje de Maquetacion WEB:</strong> HTML - CSS - Java script</li>
+                            <li><strong>Base de Datos:</strong> SQL, MySQL</li>
+                            <li><strong>Metodologías:</strong> Desarrollo ágil, trabajo colaborativo, gestión de proyectos</li>
+                            <li><strong>Herramientas:</strong> Git, Visual Studio,Net Beans</li>
+                            <li><strong>Frameworks:</strong> Spring, Angular</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-center">- CV - </h3>
+                    <div class="text-center">
+                        <a href="https://drive.google.com/file/d/1aVK1nbHqHfXtSbiRTrdqlw_IY3_xqYOn/view?usp=sharing"
+                            class="btn-download" download="EzequielGonzalez_CV.pdf">
+                            <i class="fas fa-download"></i> Ver CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Botón para volver al inicio -->
+                <button id="back-to-top" title="Volver al inicio"><i class="fas fa-chevron-up"></i>
+
+                </button>
+
+
+                <!-- Contenido que se revelará cuando la "puerta" se mueva -->
+                <div class="about-content" id="about-content">
+                    <h2>Sobre mí</h2>
+                    <h4>
+                        Soy un apasionado de la programación con una sólida formación en desarrollo de software y una
+                        constante búsqueda por mejorar mis habilidades. A lo largo de mi trayectoria, he trabajado con
+                        tecnologías como Java, y sigo ampliando mis conocimientos en diversas herramientas y lenguajes
+                        de programación.
+
+
+                    </h4>
+                    <h4>Con una mente curiosa y enfocada en la resolución de problemas, disfruto enfrentar desafíos
+                        técnicos que me permitan innovar y optimizar procesos. Mi objetivo es crear soluciones
+                        eficientes y escalables, siempre con un enfoque en la calidad del código y la experiencia del
+                        usuario.</h4>
+
+
+
+
+
+                </div>
+            </div>
+
+            <div id="toggle-mode-btn" class="floating-mode-toggle">
+                <i class="fas fa-adjust"></i>
+            </div>
+
+
+
+            <button onclick="toggleSlide()" class="btn-arrow-right">
+                <i class="fas fa-arrow-right"></i> <!-- Icono de flecha derecha -->
+            </button>
+        </section>
+
+        <div class="floating-menu">
+            <button id="floating-main-btn" class="floating-btn">
+                <i id="floating-icon" class="fas fa-plus"></i>
+            </button>
+            <div class="floating-options">
+                <button class="floating-option whatsapp" onclick="openWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+                <button class="floating-option linkedin" onclick="openLinkedIn()">
+                    <i class="fab fa-linkedin"></i>
+                </button>
+                <button class="floating-option github" onclick="openGitHub()">
+                    <i class="fab fa-github"></i>
+                </button>
+            </div>
+            <div class="floating-cv">
+                <button class="cv-btn" onclick="downloadCV()">
+                    <i class="fas fa-file-download"></i> CV
+                </button>
+            </div>
+        </div>
+
+
+        <section id="projects" class="section-bg">
+            <h2 class="text-center">Explora mis proyectos</h2>
+            <div class="projects-container">
+
+
+                <article class="project" onmouseover="playGif(this)" onmouseout="stopGif(this)">
+                    <h3>Gestión de Clientes y Productos</h3>
+                    <img src="proyecto1.jpg" class="project-image" alt="Gestión de Clientes y Productos">
+                    <img src="proyecto1gif.gif" class="project-video" alt="Video en GIF" style="display: none;">
+                    <p>Aplicación desarrollada en Java para gestionar inventarios, clientes y proveedores.</p>
+                    <a href="https://github.com/Ezequiel96GZ/proyecto-gestion-clientes/tree/master" target="_blank">
+                        <i class="fab fa-github">GitHub</i> <!-- Ícono de GitHub -->
+                    </a>
+                </article>
+
+                <article class="project" onmouseover="playGif(this)" onmouseout="stopGif(this)">
+                    <h3>Roboguide - Fanuc</h3>
+                    <img src="proyecto2.jpg" class="project-image" alt="Gestión de Clientes y Productos">
+                    <img src="proyecto2gif.gif" class="project-video" alt="Video en GIF" style="display: none;">
+                    <p>Aplicación desarrollada en Java para gestionar inventarios, clientes y proveedores.</p>
+                    <a href="https://github.com/tu-repositorio" target="_blank">
+                        <i class="fab fa-github">GitHub</i> <!-- Ícono de GitHub -->
+                    </a>
+                </article>
+
+                <article class="project" onmouseover="playGif(this)" onmouseout="stopGif(this)">
+                    <h3>Fantasmas</h3>
+                    <img src="proyecto3.jpg" class="project-image" alt="Gestión de Clientes y Productos">
+                    <img src="proyecto3gif.gif" class="project-video" alt="Video en GIF" style="display: none;">
+                    <p>Aplicación desarrollada en Java para gestionar inventarios, clientes y proveedores.</p>
+                    <a href="https://github.com/Ezequiel96GZ/projetGhost" target="_blank">
+                        <i class="fab fa-github">GitHub</i> <!-- Ícono de GitHub -->
+                    </a>
+                </article>
+
+                <article class="project" onmouseover="playGif(this)" onmouseout="stopGif(this)">
+                    <h3>Calculadora</h3>
+                    <img src="proyecto4.jpg" class="project-image" alt="Gestión de Clientes y Productos">
+                    <img src="proyecto4gif.gif" class="project-video" alt="Video en GIF" style="display: none;">
+                    <p>Aplicación desarrollada en Java para gestionar inventarios, clientes y proveedores.</p>
+                    <a href="https://github.com/tu-repositorio" target="_blank">
+                        <i class="fab fa-github">GitHub</i> <!-- Ícono de GitHub -->
+                    </a>
+                </article>
+
+
+            </div>
+
+        </section>
+
+        <section id="canalYT" class="my-5 section-bg">
+            <h2 class="text-center">Canal de YouTube</h2>
+            <p class="text-center">¡Bienvenidos a mi canal de YouTube! En **/Eze_gz** comparto contenido relacionado con
+                programación, tecnología, crecimiento personal, y toques de humor, como memes y shorts divertidos.
+                Explora mis videos para aprender sobre el mundo de la programación mientras te diviertes. ¡Únete a la
+                comunidad!</p>
+            <div class="text-center">
+                <a href="https://www.youtube.com/@eze_gz" target="_blank" class="btn-youtube">
+                    <i class="fab fa-youtube"></i> Visita mi canal
                 </a>
             </div>
-            <div class="contact-item">
-                <a href="mailto:ezequiel1996gonzalez@hotmail.com" class="btn-contact email1">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
+            <div class="text-center mt-4">
+                <h4>Algunos de mis videos recientes:</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="https://youtube.com/shorts/bEMxVaeoU8k?si=5IXOgUVOjQePE0Jd" target="_blank">
+                            <img src="https://img.youtube.com/vi/bEMxVaeoU8k/maxresdefault.jpg"
+                                alt="Miniatura de Short 1" width="100%" height="215">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtube.com/shorts/7kZGjhDYGdw?si=jAj7aMqR0M0NKp0G" target="_blank">
+                            <img src="https://img.youtube.com/vi/7kZGjhDYGdw/maxresdefault.jpg"
+                                alt="Miniatura de Short 2" width="100%" height="215">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtube.com/shorts/moLJ-VbSWnU?si=NBAId05DXRDaY7dg" target="_blank">
+                            <img src="https://img.youtube.com/vi/moLJ-VbSWnU/maxresdefault.jpg"
+                                alt="Miniatura de Short 3" width="100%" height="215">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="contact-item">
-                <a href="https://www.linkedin.com/in/ezequielgz/" target="_blank" class="btn-contact linkedin1">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-    </section>
+        </section>
 
-</main>
 
-<footer class="bg-dark text-white text-center p-3">
-    <p>&copy; 2024 Ezequiel González. Todos los derechos reservados.</p>
-</footer>
+        <section id="contact" class="my-5 section-bg">
+            <h2 class="text-center">¡Conéctate conmigo!</h2>
+            <div class="contact-buttons">
+                <div class="contact-item">
+                    <a href="https://wa.me/5491158422609" target="_blank" class="btn-contact whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:ezequiel1996gonzalez@hotmail.com" class="btn-contact email1">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/ezequielgz/" target="_blank" class="btn-contact linkedin1">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+        </section>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="scripts.js"></script> 
-</div>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 Ezequiel González. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    </div>
 </body>
 
 </html>
