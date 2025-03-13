@@ -97,7 +97,7 @@ function openGitHub() {
 }
 
 function downloadCV() {
-    window.open("https://drive.google.com/file/d/1aVK1nbHqHfXtSbiRTrdqlw_IY3_xqYOn/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1o0CvnuwMiF-lpybt3XGxOoiDBSQKdARb/view?usp=sharing", "_blank");
 }
 
 // Variable para el botón principal y el menú flotante
